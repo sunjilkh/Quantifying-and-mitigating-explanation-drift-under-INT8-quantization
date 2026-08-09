@@ -4,7 +4,7 @@ Code, result tables and figures accompanying the *Scientific Reports* submission
 
 **Author** Sunzil Khandaker, Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh
 **Contact** khandaker15-5383@diu.edu.bd
-**Archived release** (model weights, ONNX graphs, complete run): https://doi.org/10.5281/zenodo.XXXXXXX
+**Archived release** (model weights, ONNX graphs, complete run): https://doi.org/10.5281/zenodo.21861297
 
 ---
 
@@ -63,7 +63,7 @@ The script locates `tables/` automatically (working directory, any Kaggle input,
 ### The full study -- Kaggle, one NVIDIA T4
 
 1. Open `quantxai_full_run.ipynb` as a Kaggle notebook.
-2. Attach `paddy-disease-classification` and `jesperdramsch/siim-acr-pneumothorax-segmentation-data` as inputs.
+2. Attach `paddy-disease-classification` and `jesperdramsch/siim-acr-pneumothorax-segmentation-data` (and RoCoLe if running supplementary checks) as inputs.
 3. Accelerator GPU T4, Internet on. Leave `PROFILE = "full"` in CELL 1.
 4. Run all. Expect roughly one GPU-day; intermediate state is checkpointed, so an interrupted session resumes rather than restarts.
 
@@ -102,6 +102,7 @@ Neither dataset is redistributed here.
 
 - Paddy Doctor: https://www.kaggle.com/competitions/paddy-disease-classification
 - SIIM-ACR Pneumothorax Segmentation: https://www.kaggle.com/datasets/jesperdramsch/siim-acr-pneumothorax-segmentation-data
+- RoCoLe Robusta Coffee Leaf Images: https://doi.org/10.17632/c5yvn32dzg.2
 
 ## Environment
 
@@ -117,4 +118,4 @@ See `CITATION.cff`. If you use this code or these results, please cite the artic
 
 ## License
 
-The contents of this repository are released under the Creative Commons Attribution 4.0 International licence (`LICENSE`). The two datasets remain under their own terms.
+The contents of this repository are released under the Creative Commons Attribution 4.0 International licence (`LICENSE`). The datasets remain under their own terms.
