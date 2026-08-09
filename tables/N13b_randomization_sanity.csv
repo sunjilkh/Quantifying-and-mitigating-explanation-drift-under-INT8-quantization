@@ -1,0 +1,10 @@
+arch,randomized_frac,n,spearman_vs_trained
+tf_efficientnetv2_s,0.25,16,-0.1431
+tf_efficientnetv2_s,0.5,16,0.2147
+tf_efficientnetv2_s,1.0,16,0.1214
+resnet50,0.25,16,0.1371
+resnet50,0.5,16,0.0857
+resnet50,1.0,16,0.011
+mobilenetv3_large_100,0.25,16,0.0684
+mobilenetv3_large_100,0.5,16,0.0486
+mobilenetv3_large_100,1.0,16,-0.1662

@@ -1,0 +1,7 @@
+mode,folded,fold_verified,weight_quant_layers,act_quant_points,arch
+legacy,0,,171,383,tf_efficientnetv2_s
+qdq,0,True,171,103,tf_efficientnetv2_s
+legacy,0,,54,156,resnet50
+qdq,4,True,54,50,resnet50
+legacy,0,,64,158,mobilenetv3_large_100
+qdq,0,True,64,49,mobilenetv3_large_100

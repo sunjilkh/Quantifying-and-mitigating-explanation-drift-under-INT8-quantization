@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the article below."
+title: "Quantifying and mitigating explanation drift under INT8 quantization in plant disease image classification"
+abstract: "Code, result tables and figures for a study of how INT8 post-training and quantization-aware quantization affect Grad-CAM, Grad-CAM++, LIME and Integrated Gradients attributions across EfficientNetV2-S, ResNet-50 and MobileNetV3-Large on the Paddy Doctor dataset."
+type: software
+authors:
+  - family-names: Khandaker
+    given-names: Sunzil
+    email: khandaker15-5383@diu.edu.bd
+    affiliation: "Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh"
+version: "1.0.0"
+date-released: "2026-08-09"
+license: CC-BY-4.0
+repository-code: "https://github.com/USERNAME/quantxai-int8-explanation-drift"
+keywords:
+  - explainability drift
+  - model quantization
+  - Grad-CAM
+  - Integrated Gradients
+  - post-training quantization
+  - quantization-aware training
+  - plant disease detection
+  - edge deployment
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.XXXXXXX
+    description: "Archived release including model checkpoints and ONNX graphs"
+preferred-citation:
+  type: article
+  title: "Quantifying and mitigating explanation drift under INT8 quantization in plant disease image classification"
+  authors:
+    - family-names: Khandaker
+      given-names: Sunzil
+      email: khandaker15-5383@diu.edu.bd
+      affiliation: "Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh"
+  journal: "Scientific Reports"
+  year: 2026

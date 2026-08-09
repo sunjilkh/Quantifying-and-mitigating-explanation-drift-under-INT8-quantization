@@ -1,0 +1,4 @@
+arch,params_M,gflops,fp32_ckpt_MB,gpu_ms_bs1,gpu_ms_bs1_sd,gpu_ms_bs8,gpu_ms_bs8_sd,cpu_ms_bs1,cpu_ms_bs1_sd,onnx_fp32_MB,onnx_int8_MB,compression_x,ort_cpu_fp32_ms,ort_cpu_int8_ms,ort_cpu_speedup
+tf_efficientnetv2_s,20.19,5.697,81.67,18.658,1.12,29.597,0.439,97.48,8.08,80.65,22.77,3.54,43.45,39.75,1.09
+resnet50,23.53,8.174,94.44,7.205,1.132,28.24,0.324,83.22,5.69,94.03,24.04,3.91,40.7,31.77,1.28
+mobilenetv3_large_100,4.21,0.431,17.07,6.525,0.277,6.933,0.449,27.22,3.22,16.85,4.7,3.59,5.58,8.3,0.67

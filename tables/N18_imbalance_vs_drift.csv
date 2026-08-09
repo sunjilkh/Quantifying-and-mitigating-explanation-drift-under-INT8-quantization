@@ -1,0 +1,4 @@
+arch,n_classes,rho_freq_vs_iou,p_iou,rho_freq_vs_spearman,p_rho
+mobilenetv3_large_100,10,-0.358,0.3104,-0.43,0.2145
+resnet50,10,-0.261,0.4671,-0.491,0.1497
+tf_efficientnetv2_s,10,-0.333,0.3466,-0.261,0.4671

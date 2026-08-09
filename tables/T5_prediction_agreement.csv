@@ -1,0 +1,7 @@
+sim,arch,n,agreement,fp32_accuracy
+legacy,mobilenetv3_large_100,320,0.7625,0.9781
+legacy,resnet50,320,0.5531,0.9688
+legacy,tf_efficientnetv2_s,320,0.9812,0.9812
+qdq,mobilenetv3_large_100,320,0.9625,0.9781
+qdq,resnet50,320,0.9656,0.9688
+qdq,tf_efficientnetv2_s,320,0.9844,0.9812

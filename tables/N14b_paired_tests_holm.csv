@@ -1,0 +1,7 @@
+comparison,n_pairs,mean_diff,cohens_dz,cliffs_delta,p_raw,n_for_80pct_power,achieved_power,p_holm,significant_holm
+gradcam vs gradcampp,960,-0.0565,-0.299,-0.098,0.0,89.0,1.0,0.0,True
+gradcam vs ig,960,0.2163,1.178,0.639,0.0,6.0,1.0,0.0,True
+gradcam vs lime,360,0.0312,0.117,0.06,0.0343,576.0,0.601,0.0343,True
+gradcampp vs ig,960,0.2728,1.723,0.9,0.0,3.0,1.0,0.0,True
+gradcampp vs lime,360,0.0891,0.327,0.181,0.0,74.0,1.0,0.0,True
+ig vs lime,360,-0.1788,-0.734,-0.466,0.0,15.0,1.0,0.0,True

@@ -1,0 +1,9 @@
+\begin{tabular}{lllrlllr}
+\toprule
+arch & cam\_layer & shape & channels & spatial & naive\_last4d & naive\_shape & naive\_is\_degenerate \\
+\midrule
+tf\_efficientnetv2\_s & bn2 & (1, 1280, 7, 7) & 1280 & 7x7 & global\_pool.pool & (1, 1280, 1, 1) & True \\
+resnet50 & layer4 & (1, 2048, 7, 7) & 2048 & 7x7 & global\_pool.pool & (1, 2048, 1, 1) & True \\
+mobilenetv3\_large\_100 & blocks & (1, 960, 7, 7) & 960 & 7x7 & act2 & (1, 1280, 1, 1) & True \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,16 @@
+arch,engine,calib_source,calib_method,n_calib,agreement,int8_acc,size_mb
+tf_efficientnetv2_s,fakequant-qdq,train_subset(correct),MinMax,512,0.9844,0.975,
+tf_efficientnetv2_s,fakequant-qdq,"val_subset(as-submitted,LEAK)",MinMax,512,0.9969,0.9781,
+tf_efficientnetv2_s,onnxruntime,train_subset(correct),MinMax,512,0.6344,0.6406,22.77
+tf_efficientnetv2_s,onnxruntime,train_subset(correct),Entropy,64,0.7375,0.7438,22.77
+tf_efficientnetv2_s,onnxruntime,train_subset(correct),Percentile,64,0.9156,0.9094,22.77
+resnet50,fakequant-qdq,train_subset(correct),MinMax,512,0.9656,0.9406,
+resnet50,fakequant-qdq,"val_subset(as-submitted,LEAK)",MinMax,512,0.9437,0.9469,
+resnet50,onnxruntime,train_subset(correct),MinMax,512,0.9,0.8844,24.04
+resnet50,onnxruntime,train_subset(correct),Entropy,64,0.9656,0.9563,24.04
+resnet50,onnxruntime,train_subset(correct),Percentile,64,0.9781,0.9563,24.04
+mobilenetv3_large_100,fakequant-qdq,train_subset(correct),MinMax,512,0.9688,0.9594,
+mobilenetv3_large_100,fakequant-qdq,"val_subset(as-submitted,LEAK)",MinMax,512,0.9469,0.9313,
+mobilenetv3_large_100,onnxruntime,train_subset(correct),MinMax,512,0.5469,0.5312,4.7
+mobilenetv3_large_100,onnxruntime,train_subset(correct),Entropy,64,0.7688,0.7594,4.7
+mobilenetv3_large_100,onnxruntime,train_subset(correct),Percentile,64,0.8906,0.875,4.7

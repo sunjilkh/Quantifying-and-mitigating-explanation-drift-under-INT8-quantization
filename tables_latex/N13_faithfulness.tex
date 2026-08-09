@@ -1,0 +1,18 @@
+\begin{tabular}{lllrrrrrrr}
+\toprule
+arch & model & xai & n & deletion\_auc & insertion\_auc & conf\_drop & n\_infid\_sens & infidelity & sensitivity\_max \\
+\midrule
+tf\_efficientnetv2\_s & fp32 & gradcam & 250 & 0.2883 & 0.5754 & 0.7420 & 64 & 59.4018 & 0.1719 \\
+tf\_efficientnetv2\_s & fp32 & gradcampp & 250 & 0.3392 & 0.5263 & 0.7420 & 64 & 32.6224 & 0.2913 \\
+tf\_efficientnetv2\_s & int8-qdq & gradcam & 250 & 0.2702 & 0.5340 & 0.6885 & 64 & 55.0432 & 0.3101 \\
+tf\_efficientnetv2\_s & int8-qdq & gradcampp & 250 & 0.3091 & 0.4940 & 0.6885 & 64 & 29.0497 & 0.5148 \\
+resnet50 & fp32 & gradcam & 250 & 0.2492 & 0.7126 & 0.7761 & 64 & 45.9148 & 0.0961 \\
+resnet50 & fp32 & gradcampp & 250 & 0.2569 & 0.7038 & 0.7761 & 64 & 46.1087 & 0.0827 \\
+resnet50 & int8-qdq & gradcam & 250 & 0.2317 & 0.6757 & 0.7384 & 64 & 45.8097 & 0.3519 \\
+resnet50 & int8-qdq & gradcampp & 250 & 0.2437 & 0.6652 & 0.7384 & 64 & 46.2043 & 0.3144 \\
+mobilenetv3\_large\_100 & fp32 & gradcam & 250 & 0.1743 & 0.2658 & 0.7663 & 64 & 47.6820 & 0.3374 \\
+mobilenetv3\_large\_100 & fp32 & gradcampp & 250 & 0.1648 & 0.2560 & 0.7663 & 64 & 60.6712 & 0.1205 \\
+mobilenetv3\_large\_100 & int8-qdq & gradcam & 250 & 0.1712 & 0.2770 & 0.6479 & 64 & 39.8472 & 0.5713 \\
+mobilenetv3\_large\_100 & int8-qdq & gradcampp & 250 & 0.1613 & 0.2624 & 0.6479 & 64 & 54.8504 & 0.2636 \\
+\bottomrule
+\end{tabular}

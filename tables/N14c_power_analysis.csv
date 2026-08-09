@@ -1,0 +1,7 @@
+metric,observed_sd,target_delta,cohens_d,n_needed_80,power_at_n20,power_at_actual_n,actual_n
+topk_iou,0.1996,0.02,0.1,782.0,0.065,1.0,3240
+topk_iou,0.1996,0.05,0.251,126.0,0.201,1.0,3240
+topk_iou,0.1996,0.1,0.501,32.0,0.611,1.0,3240
+spearman,0.15,0.02,0.133,442.0,0.086,1.0,3240
+spearman,0.15,0.05,0.333,71.0,0.319,1.0,3240
+spearman,0.15,0.1,0.667,18.0,0.846,1.0,3240

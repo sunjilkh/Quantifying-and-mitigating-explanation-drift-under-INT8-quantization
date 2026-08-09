@@ -1,0 +1,12 @@
+\begin{tabular}{llrrr}
+\toprule
+sim & arch & n & agreement & fp32\_accuracy \\
+\midrule
+legacy & mobilenetv3\_large\_100 & 320 & 0.7625 & 0.9781 \\
+legacy & resnet50 & 320 & 0.5531 & 0.9688 \\
+legacy & tf\_efficientnetv2\_s & 320 & 0.9812 & 0.9812 \\
+qdq & mobilenetv3\_large\_100 & 320 & 0.9625 & 0.9781 \\
+qdq & resnet50 & 320 & 0.9656 & 0.9688 \\
+qdq & tf\_efficientnetv2\_s & 320 & 0.9844 & 0.9812 \\
+\bottomrule
+\end{tabular}

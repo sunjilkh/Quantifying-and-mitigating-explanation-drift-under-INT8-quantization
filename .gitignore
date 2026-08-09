@@ -1,0 +1,37 @@
+# ---------------------------------------------------------------------------
+# Large binaries live in the Zenodo record, not in git.
+# GitHub rejects any single file above 100 MB.
+# ---------------------------------------------------------------------------
+ckpt/
+onnx/
+*.pt
+*.pth
+*.onnx
+*.zip
+
+# Superseded figure sets and regenerated output
+figures/Old/
+figures_v2/
+figures_v3/
+_unzipped/
+
+# Kaggle / runtime scratch
+kaggle/
+working/
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

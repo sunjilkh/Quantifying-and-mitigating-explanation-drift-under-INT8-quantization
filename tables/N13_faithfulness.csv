@@ -1,0 +1,13 @@
+arch,model,xai,n,deletion_auc,insertion_auc,conf_drop,n_infid_sens,infidelity,sensitivity_max
+tf_efficientnetv2_s,fp32,gradcam,250,0.2883,0.5754,0.742,64,59.401761,0.1719
+tf_efficientnetv2_s,fp32,gradcampp,250,0.3392,0.5263,0.742,64,32.622424,0.2913
+tf_efficientnetv2_s,int8-qdq,gradcam,250,0.2702,0.534,0.6885,64,55.043162,0.3101
+tf_efficientnetv2_s,int8-qdq,gradcampp,250,0.3091,0.494,0.6885,64,29.049685,0.5148
+resnet50,fp32,gradcam,250,0.2492,0.7126,0.7761,64,45.914845,0.0961
+resnet50,fp32,gradcampp,250,0.2569,0.7038,0.7761,64,46.108665,0.0827
+resnet50,int8-qdq,gradcam,250,0.2317,0.6757,0.7384,64,45.809731,0.3519
+resnet50,int8-qdq,gradcampp,250,0.2437,0.6652,0.7384,64,46.204286,0.3144
+mobilenetv3_large_100,fp32,gradcam,250,0.1743,0.2658,0.7663,64,47.682046,0.3374
+mobilenetv3_large_100,fp32,gradcampp,250,0.1648,0.256,0.7663,64,60.671211,0.1205
+mobilenetv3_large_100,int8-qdq,gradcam,250,0.1712,0.277,0.6479,64,39.847182,0.5713
+mobilenetv3_large_100,int8-qdq,gradcampp,250,0.1613,0.2624,0.6479,64,54.850356,0.2636

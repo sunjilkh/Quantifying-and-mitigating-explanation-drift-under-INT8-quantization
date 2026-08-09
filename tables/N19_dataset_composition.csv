@@ -1,0 +1,11 @@
+dataset,class_name,n,frac
+paddy,bacterial_leaf_blight,479,0.046
+paddy,bacterial_leaf_streak,380,0.0365
+paddy,bacterial_panicle_blight,337,0.0324
+paddy,blast,1738,0.167
+paddy,brown_spot,965,0.0927
+paddy,dead_heart,1442,0.1386
+paddy,downy_mildew,620,0.0596
+paddy,hispa,1594,0.1532
+paddy,normal,1764,0.1695
+paddy,tungro,1088,0.1045

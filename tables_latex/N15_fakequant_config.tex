@@ -1,0 +1,12 @@
+\begin{tabular}{lrlrrl}
+\toprule
+mode & folded & fold\_verified & weight\_quant\_layers & act\_quant\_points & arch \\
+\midrule
+legacy & 0 & NaN & 171 & 383 & tf\_efficientnetv2\_s \\
+qdq & 0 & True & 171 & 103 & tf\_efficientnetv2\_s \\
+legacy & 0 & NaN & 54 & 156 & resnet50 \\
+qdq & 4 & True & 54 & 50 & resnet50 \\
+legacy & 0 & NaN & 64 & 158 & mobilenetv3\_large\_100 \\
+qdq & 0 & True & 64 & 49 & mobilenetv3\_large\_100 \\
+\bottomrule
+\end{tabular}
