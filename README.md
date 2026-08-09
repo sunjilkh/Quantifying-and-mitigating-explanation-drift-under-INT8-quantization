@@ -4,7 +4,7 @@ Code, result tables and figures accompanying the *Scientific Reports* submission
 
 **Author** Sunzil Khandaker, Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh
 **Contact** khandaker15-5383@diu.edu.bd
-**Archived release** (model weights, ONNX graphs, complete run): https://doi.org/10.5281/zenodo.21861297
+
 
 ---
 
