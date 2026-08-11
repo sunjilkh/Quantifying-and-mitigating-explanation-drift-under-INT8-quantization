@@ -38,6 +38,7 @@ Every number in the paper is produced by the notebook in this repository and exp
 |-- .gitignore
 |-- requirements.txt            17 pinned packages
 |-- quantxai_full_run.ipynb     the complete study, cell outputs retained
+|-- qat_calibration_reanalysis.ipynb re-analysis of calibration configurations
 |-- REGEN_FIGURES.py            rebuilds every figure from tables/ (CPU, ~30 s)
 |-- MANIFEST.json               run configuration and environment
 |-- PROGRESS.json               per-stage timings
