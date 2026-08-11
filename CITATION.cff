@@ -23,7 +23,7 @@ keywords:
   - edge deployment
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.XXXXXXX
+    value: 10.5281/zenodo.21886224
     description: "Archived release including model checkpoints and ONNX graphs"
 preferred-citation:
   type: article
