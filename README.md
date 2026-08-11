@@ -43,11 +43,23 @@ Every number in the paper is produced by the notebook in this repository and exp
 |-- PROGRESS.json               per-stage timings
 |-- TABLE_INDEX.csv             index of all 34 tables
 |-- tables/                     34 CSVs holding every reported number
+|   `-- onnx/                   4 additional CSVs from ONNX Runtime re-runs (see below)
 |-- tables_latex/               the same tables as LaTeX table bodies
 `-- figures/                    8 figures, each as PDF + PNG + SVG
 ```
 
 Model checkpoints (`ckpt/`, 24 files) and ONNX graphs (`onnx/`, 12 files) are **not** in this repository: they exceed GitHub's 100 MB per-file limit. They are in the Zenodo record linked above.
+
+### `tables/onnx/` — ONNX Runtime supplementary tables
+
+Four CSVs produced by re-running the calibration and full-split CAM analyses directly through ONNX Runtime (rather than the PyTorch simulate-quantization path used in the main notebook):
+
+| File | Contents |
+|---|---|
+| `N25_calibration_matched64.csv` | Calibration sensitivity re-run with a fixed 64-image budget; compares MinMax, Entropy and Percentile across all three backbones and cross-checks against published numbers |
+| `N26_fullsplit_cam.csv` | Full validation-split (2,082 images) Grad-CAM / Grad-CAM++ drift metrics (top-k IoU, Dice, Spearman ρ) for each backbone under ONNX INT8 |
+| `N26_fullsplit_cam_gate.csv` | Gating check: reproduced vs. published top-k IoU for the 320-image subset; all absolute deltas ≤ 0.006, confirming reproducibility |
+| `RAW_fullsplit_cam.csv` | Per-image raw records underlying `N26_fullsplit_cam.csv` (~1.5 MB, 2,082 rows per backbone × method) |
 
 ## Reproducing
 
