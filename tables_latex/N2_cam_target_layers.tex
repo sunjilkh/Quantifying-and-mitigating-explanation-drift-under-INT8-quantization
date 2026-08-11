@@ -1,9 +1,11 @@
-\begin{tabular}{lllrlllr}
+\begin{tabular}{lll ll}
 \toprule
-arch & cam\_layer & shape & channels & spatial & naive\_last4d & naive\_shape & naive\_is\_degenerate \\
+ & \multicolumn{2}{c}{\textbf{Resolved target}} & \multicolumn{2}{c}{\textbf{Naive target}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+\textbf{Architecture} & \textbf{Module} & \textbf{Output shape} & \textbf{Module} & \textbf{Output shape} \\
 \midrule
-tf\_efficientnetv2\_s & bn2 & (1, 1280, 7, 7) & 1280 & 7x7 & global\_pool.pool & (1, 1280, 1, 1) & True \\
-resnet50 & layer4 & (1, 2048, 7, 7) & 2048 & 7x7 & global\_pool.pool & (1, 2048, 1, 1) & True \\
-mobilenetv3\_large\_100 & blocks & (1, 960, 7, 7) & 960 & 7x7 & act2 & (1, 1280, 1, 1) & True \\
+EfficientNetV2-S & \texttt{bn2} & (1, 1280, 7, 7) & \texttt{global\_pool.pool} & (1, 1280, 1, 1) \\
+ResNet-50 & \texttt{layer4} & (1, 2048, 7, 7) & \texttt{global\_pool.pool} & (1, 2048, 1, 1) \\
+MobileNetV3-L & \texttt{blocks} & (1, 960, 7, 7) & \texttt{act2} & (1, 1280, 1, 1) \\
 \bottomrule
 \end{tabular}

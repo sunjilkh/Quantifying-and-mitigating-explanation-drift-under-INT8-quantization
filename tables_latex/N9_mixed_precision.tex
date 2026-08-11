@@ -1,9 +1,11 @@
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{ll cc cc}
 \toprule
-arch & kept\_fp32 & iou\_all\_int8 & iou\_cam\_fp32 & collapse\_all\_int8 & collapse\_cam\_fp32 & rho\_all\_int8 & rho\_cam\_fp32 \\
+ & & \multicolumn{2}{c}{\textbf{Top-$k$ IoU}} & \multicolumn{2}{c}{\textbf{Spearman $\rho$}} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6}
+\textbf{Architecture} & \textbf{FP32 stage} & \textbf{All INT8} & \textbf{CAM stage FP32} & \textbf{All INT8} & \textbf{CAM stage FP32} \\
 \midrule
-tf\_efficientnetv2\_s & bn2 & 0.7015 & 0.8225 & 0.0000 & 0.0000 & 0.9029 & 0.9673 \\
-resnet50 & layer4 & 0.7864 & 0.7907 & 0.0000 & 0.0000 & 0.9434 & 0.9458 \\
-mobilenetv3\_large\_100 & blocks & 0.5823 & 0.8406 & 0.0000 & 0.0000 & 0.7903 & 0.9714 \\
+EfficientNetV2-S  & \texttt{bn2}   & 0.702 & \textbf{0.823} & 0.903 & \textbf{0.967} \\
+ResNet-50         & \texttt{layer4} & 0.786 & 0.791 & 0.943 & 0.946 \\
+MobileNetV3-Large & \texttt{blocks} & 0.582 & \textbf{0.841} & 0.790 & \textbf{0.971} \\
 \bottomrule
 \end{tabular}

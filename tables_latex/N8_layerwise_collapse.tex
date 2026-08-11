@@ -1,54 +1,17 @@
-\begin{tabular}{lllrlrrrrrrr}
+\begin{tabular}{llccccccc}
 \toprule
-arch & sim & layer & is\_cam\_layer & shape & var\_fp32 & var\_int8 & var\_retained & levels\_fp32 & levels\_int8 & const\_ch\_fp32 & const\_ch\_int8 \\
+ & & \multicolumn{3}{c}{\textbf{Per-channel spatial variance}} & \multicolumn{2}{c}{\textbf{Distinct levels}} & \multicolumn{2}{c}{\textbf{Const.\ ch.}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+\textbf{Architecture} & \textbf{Target} & FP32 & INT8 & Retained & FP32 & INT8 & FP32 & INT8 \\
 \midrule
-tf\_efficientnetv2\_s & legacy & blocks.5.14.drop\_path & False & (1, 256, 7, 7) & 5.7976 & 6.3572 & 1.0965 & 49.0000 & 18.2000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & blocks.5.14 & False & (1, 256, 7, 7) & 20.7375 & 22.2294 & 1.0719 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & blocks.5 & False & (1, 256, 7, 7) & 20.7375 & 22.2294 & 1.0719 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & blocks & False & (1, 256, 7, 7) & 20.7375 & 22.2294 & 1.0719 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & conv\_head & False & (1, 1280, 7, 7) & 156.9170 & 165.2691 & 1.0532 & 49.0000 & 22.1000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & bn2.drop & False & (1, 1280, 7, 7) & 15.6300 & 16.4550 & 1.0528 & 49.0000 & 22.1000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & legacy & bn2.act & False & (1, 1280, 7, 7) & 0.1426 & 0.1349 & 0.9455 & 49.0000 & 5.4000 & 0.0000 & 0.0005 \\
-tf\_efficientnetv2\_s & legacy & bn2 & True & (1, 1280, 7, 7) & 0.1426 & 0.1349 & 0.9455 & 49.0000 & 5.4000 & 0.0000 & 0.0005 \\
-tf\_efficientnetv2\_s & qdq & blocks.5.14.drop\_path & False & (1, 256, 7, 7) & 5.7976 & 6.1472 & 1.0603 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & blocks.5.14 & False & (1, 256, 7, 7) & 20.7375 & 21.8936 & 1.0557 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & blocks.5 & False & (1, 256, 7, 7) & 20.7375 & 21.8936 & 1.0557 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & blocks & False & (1, 256, 7, 7) & 20.7375 & 21.8936 & 1.0557 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & conv\_head & False & (1, 1280, 7, 7) & 156.9170 & 162.8562 & 1.0378 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & bn2.drop & False & (1, 1280, 7, 7) & 15.6300 & 16.2244 & 1.0380 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & qdq & bn2.act & False & (1, 1280, 7, 7) & 0.1426 & 0.1370 & 0.9606 & 49.0000 & 6.5000 & 0.0000 & 0.0005 \\
-tf\_efficientnetv2\_s & qdq & bn2 & True & (1, 1280, 7, 7) & 0.1426 & 0.1370 & 0.9606 & 49.0000 & 6.5000 & 0.0000 & 0.0005 \\
-resnet50 & legacy & layer4.2.drop\_block & False & (1, 512, 7, 7) & 3.6992 & 1.6190 & 0.4377 & 49.0000 & 8.7000 & 0.0000 & 0.0000 \\
-resnet50 & legacy & layer4.2.act2 & False & (1, 512, 7, 7) & 0.1591 & 0.1170 & 0.7354 & 11.0000 & 2.2000 & 0.2660 & 0.3279 \\
-resnet50 & legacy & layer4.2.aa & False & (1, 512, 7, 7) & 0.1591 & 0.1170 & 0.7354 & 11.0000 & 2.2000 & 0.2660 & 0.3279 \\
-resnet50 & legacy & layer4.2.conv3 & False & (1, 2048, 7, 7) & 4.3819 & 3.2618 & 0.7444 & 49.0000 & 18.2000 & 0.0000 & 0.0000 \\
-resnet50 & legacy & layer4.2.bn3 & False & (1, 2048, 7, 7) & 1.2031 & 0.9098 & 0.7562 & 49.0000 & 11.5000 & 0.0000 & 0.0000 \\
-resnet50 & legacy & layer4.2.act3 & False & (1, 2048, 7, 7) & 0.1901 & 0.2390 & 1.2573 & 5.4000 & 3.5000 & 0.3665 & 0.1831 \\
-resnet50 & legacy & layer4.2 & False & (1, 2048, 7, 7) & 0.1901 & 0.2390 & 1.2573 & 5.4000 & 3.5000 & 0.3665 & 0.1831 \\
-resnet50 & legacy & layer4 & True & (1, 2048, 7, 7) & 0.1901 & 0.2390 & 1.2573 & 5.4000 & 3.5000 & 0.3665 & 0.1831 \\
-resnet50 & qdq & layer4.2.drop\_block & False & (1, 512, 7, 7) & 3.6992 & 2.8910 & 0.7815 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-resnet50 & qdq & layer4.2.act2 & False & (1, 512, 7, 7) & 0.1591 & 0.1389 & 0.8734 & 11.0000 & 4.8000 & 0.2660 & 0.2632 \\
-resnet50 & qdq & layer4.2.aa & False & (1, 512, 7, 7) & 0.1591 & 0.1389 & 0.8734 & 11.0000 & 4.8000 & 0.2660 & 0.2632 \\
-resnet50 & qdq & layer4.2.conv3 & False & (1, 2048, 7, 7) & 4.3819 & 3.7767 & 0.8619 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-resnet50 & qdq & layer4.2.bn3 & False & (1, 2048, 7, 7) & 1.2031 & 1.0435 & 0.8674 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-resnet50 & qdq & layer4.2.act3 & False & (1, 2048, 7, 7) & 0.1901 & 0.2303 & 1.2117 & 5.4000 & 3.3000 & 0.3665 & 0.3336 \\
-resnet50 & qdq & layer4.2 & False & (1, 2048, 7, 7) & 0.1901 & 0.2303 & 1.2117 & 5.4000 & 3.3000 & 0.3665 & 0.3336 \\
-resnet50 & qdq & layer4 & True & (1, 2048, 7, 7) & 0.1901 & 0.2303 & 1.2117 & 5.4000 & 3.3000 & 0.3665 & 0.3336 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0.conv & False & (1, 960, 7, 7) & 73.7195 & 62.7339 & 0.8510 & 49.0000 & 19.5000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0.bn1.drop & False & (1, 960, 7, 7) & 15.1832 & 12.9209 & 0.8510 & 49.0000 & 19.5000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0.bn1.act & False & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0.bn1 & False & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0.aa & False & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & legacy & blocks.6.0 & False & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & legacy & blocks.6 & False & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & legacy & blocks & True & (1, 960, 7, 7) & 0.8757 & 0.6688 & 0.7637 & 20.5000 & 5.5000 & 0.0073 & 0.0164 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0.conv & False & (1, 960, 7, 7) & 73.7195 & 72.0136 & 0.9769 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0.bn1.drop & False & (1, 960, 7, 7) & 15.1832 & 14.8393 & 0.9773 & 49.0000 & 49.0000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0.bn1.act & False & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0.bn1 & False & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0.aa & False & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
-mobilenetv3\_large\_100 & qdq & blocks.6.0 & False & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
-mobilenetv3\_large\_100 & qdq & blocks.6 & False & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
-mobilenetv3\_large\_100 & qdq & blocks & True & (1, 960, 7, 7) & 0.8757 & 0.8364 & 0.9551 & 20.5000 & 6.9000 & 0.0073 & 0.0093 \\
+\multicolumn{9}{l}{\emph{Resolved target (QDQ)}} \\
+EfficientNetV2-S  & \texttt{bn2}    & 0.143 & 0.137 & 0.96 & 49.0 & 6.5 & 0.000 & 0.001 \\
+ResNet-50         & \texttt{layer4} & 0.190 & 0.230 & 1.21 &  5.4 & 3.3 & 0.367 & 0.334 \\
+MobileNetV3-Large & \texttt{blocks} & 0.876 & 0.836 & 0.96 & 20.5 & 6.9 & 0.007 & 0.009 \\
+\midrule
+\multicolumn{9}{l}{\emph{Legacy unfolded fake-quantization}} \\
+EfficientNetV2-S  & \texttt{bn2}    & 0.143 & 0.135 & 0.95 & 49.0 & 5.4 & 0.000 & 0.001 \\
+ResNet-50         & \texttt{layer4} & 0.190 & 0.239 & 1.26 &  5.4 & 3.5 & 0.367 & 0.183 \\
+MobileNetV3-Large & \texttt{blocks} & 0.876 & 0.669 & 0.76 & 20.5 & 5.5 & 0.007 & 0.016 \\
 \bottomrule
 \end{tabular}

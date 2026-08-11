@@ -1,30 +1,12 @@
-\begin{tabular}{llrlr}
+\begin{tabular}{lll}
 \toprule
-sim & dimension & k & order & kendall\_tau\_vs\_kmin \\
+\textbf{$k$} & \textbf{Ranking by top-$k$ IoU} & \textbf{Kendall $\tau$ vs.\ $k=0.05$} \\
 \midrule
-legacy & arch & 0.0500 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & arch & 0.1000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & arch & 0.1500 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & arch & 0.2000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & arch & 0.2500 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & arch & 0.3000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-legacy & xai & 0.0500 & lime|gradcampp|gradcam|ig & 1.0000 \\
-legacy & xai & 0.1000 & gradcampp|lime|gradcam|ig & 0.6670 \\
-legacy & xai & 0.1500 & gradcampp|gradcam|lime|ig & 0.3330 \\
-legacy & xai & 0.2000 & gradcampp|gradcam|lime|ig & 0.3330 \\
-legacy & xai & 0.2500 & gradcampp|gradcam|lime|ig & 0.3330 \\
-legacy & xai & 0.3000 & gradcampp|gradcam|lime|ig & 0.3330 \\
-qdq & arch & 0.0500 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-qdq & arch & 0.1000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-qdq & arch & 0.1500 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-qdq & arch & 0.2000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-qdq & arch & 0.2500 & resnet50|tf\_efficientnetv2\_s|mobilenetv3\_large\_100 & 0.3330 \\
-qdq & arch & 0.3000 & tf\_efficientnetv2\_s|resnet50|mobilenetv3\_large\_100 & 1.0000 \\
-qdq & xai & 0.0500 & lime|gradcampp|gradcam|ig & 1.0000 \\
-qdq & xai & 0.1000 & gradcampp|lime|gradcam|ig & 0.6670 \\
-qdq & xai & 0.1500 & gradcampp|gradcam|lime|ig & 0.3330 \\
-qdq & xai & 0.2000 & gradcampp|gradcam|lime|ig & 0.3330 \\
-qdq & xai & 0.2500 & gradcampp|gradcam|lime|ig & 0.3330 \\
-qdq & xai & 0.3000 & gradcampp|gradcam|lime|ig & 0.3330 \\
+0.05 & LIME $\succ$ Grad-CAM++ $\succ$ Grad-CAM $\succ$ Int.\ Gradients & 1.000 \\
+0.10 & Grad-CAM++ $\succ$ LIME $\succ$ Grad-CAM $\succ$ Int.\ Gradients & 0.667 \\
+0.15 & Grad-CAM++ $\succ$ Grad-CAM $\succ$ LIME $\succ$ Int.\ Gradients & 0.333 \\
+0.20 & Grad-CAM++ $\succ$ Grad-CAM $\succ$ LIME $\succ$ Int.\ Gradients & 0.333 \\
+0.25 & Grad-CAM++ $\succ$ Grad-CAM $\succ$ LIME $\succ$ Int.\ Gradients & 0.333 \\
+0.30 & Grad-CAM++ $\succ$ Grad-CAM $\succ$ LIME $\succ$ Int.\ Gradients & 0.333 \\
 \bottomrule
 \end{tabular}

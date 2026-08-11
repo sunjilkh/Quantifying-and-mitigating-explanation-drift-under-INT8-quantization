@@ -1,33 +1,32 @@
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{ll cccc}
 \toprule
-arch & stage & lam & seed & acc & macro\_f1 & bal\_acc & agreement \\
+\textbf{Architecture} & \textbf{Stage} & \textbf{Accuracy} & \textbf{Macro-F1} & \textbf{Balanced acc.} & \textbf{Agreement} \\
 \midrule
-tf\_efficientnetv2\_s & FP32 & NaN & 42 & 0.9793 & 0.9796 & 0.9767 & 1.0000 \\
-tf\_efficientnetv2\_s & PTQ-INT8 & NaN & 42 & 0.9755 & 0.9752 & 0.9717 & 0.9914 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 0.0000 & 42 & 0.9731 & 0.9736 & 0.9746 & 0.9803 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 0.1000 & 42 & 0.9755 & 0.9756 & 0.9763 & 0.9808 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 0.5000 & 42 & 0.9745 & 0.9741 & 0.9759 & 0.9803 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 0.5000 & 1337 & 0.9798 & 0.9793 & 0.9770 & 0.9856 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 0.5000 & 2024 & 0.9721 & 0.9728 & 0.9742 & 0.9817 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 1.0000 & 42 & 0.9755 & 0.9765 & 0.9760 & 0.9813 \\
-tf\_efficientnetv2\_s & QAT-INT8 & 2.0000 & 42 & 0.9741 & 0.9752 & 0.9752 & 0.9808 \\
-resnet50 & FP32 & NaN & 42 & 0.9745 & 0.9709 & 0.9688 & 1.0000 \\
-resnet50 & PTQ-INT8 & NaN & 42 & 0.9500 & 0.9464 & 0.9442 & 0.9654 \\
-resnet50 & QAT-INT8 & 0.0000 & 42 & 0.9693 & 0.9653 & 0.9641 & 0.9832 \\
-resnet50 & QAT-INT8 & 0.1000 & 42 & 0.9645 & 0.9589 & 0.9588 & 0.9789 \\
-resnet50 & QAT-INT8 & 0.5000 & 42 & 0.9625 & 0.9583 & 0.9577 & 0.9750 \\
-resnet50 & QAT-INT8 & 0.5000 & 1337 & 0.9664 & 0.9616 & 0.9607 & 0.9803 \\
-resnet50 & QAT-INT8 & 0.5000 & 2024 & 0.9630 & 0.9572 & 0.9592 & 0.9721 \\
-resnet50 & QAT-INT8 & 1.0000 & 42 & 0.9669 & 0.9627 & 0.9640 & 0.9760 \\
-resnet50 & QAT-INT8 & 2.0000 & 42 & 0.9640 & 0.9586 & 0.9588 & 0.9803 \\
-mobilenetv3\_large\_100 & FP32 & NaN & 42 & 0.9750 & 0.9732 & 0.9696 & 1.0000 \\
-mobilenetv3\_large\_100 & PTQ-INT8 & NaN & 42 & 0.9577 & 0.9535 & 0.9469 & 0.9707 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 0.0000 & 42 & 0.9707 & 0.9711 & 0.9714 & 0.9765 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 0.1000 & 42 & 0.9741 & 0.9734 & 0.9726 & 0.9808 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 0.5000 & 42 & 0.9712 & 0.9723 & 0.9719 & 0.9784 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 0.5000 & 1337 & 0.9784 & 0.9793 & 0.9781 & 0.9832 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 0.5000 & 2024 & 0.9726 & 0.9728 & 0.9732 & 0.9813 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 1.0000 & 42 & 0.9731 & 0.9737 & 0.9735 & 0.9803 \\
-mobilenetv3\_large\_100 & QAT-INT8 & 2.0000 & 42 & 0.9726 & 0.9740 & 0.9737 & 0.9808 \\
+\multirow{7}{*}{EfficientNetV2-S}
+ & FP32 & 0.9793 & 0.9796 & 0.9767 & 1.0000 \\
+ & PTQ-INT8 & 0.9755 & 0.9752 & 0.9717 & 0.9914 \\
+ & QAT-INT8 ($\lambda=0$) & 0.9731 & 0.9736 & 0.9746 & 0.9803 \\
+ & QAT-INT8 ($\lambda=0.1$) & 0.9755 & 0.9756 & 0.9763 & 0.9808 \\
+ & QAT-INT8 ($\lambda=0.5$) & 0.9745 & 0.9741 & 0.9759 & 0.9803 \\
+ & QAT-INT8 ($\lambda=1$) & 0.9755 & 0.9765 & 0.9760 & 0.9813 \\
+ & QAT-INT8 ($\lambda=2$) & 0.9741 & 0.9752 & 0.9752 & 0.9808 \\
+\midrule
+\multirow{7}{*}{ResNet-50}
+ & FP32 & 0.9745 & 0.9709 & 0.9688 & 1.0000 \\
+ & PTQ-INT8 & 0.9500 & 0.9464 & 0.9442 & 0.9654 \\
+ & QAT-INT8 ($\lambda=0$) & 0.9693 & 0.9653 & 0.9641 & 0.9832 \\
+ & QAT-INT8 ($\lambda=0.1$) & 0.9645 & 0.9589 & 0.9588 & 0.9789 \\
+ & QAT-INT8 ($\lambda=0.5$) & 0.9625 & 0.9583 & 0.9577 & 0.9750 \\
+ & QAT-INT8 ($\lambda=1$) & 0.9669 & 0.9627 & 0.9640 & 0.9760 \\
+ & QAT-INT8 ($\lambda=2$) & 0.9640 & 0.9586 & 0.9588 & 0.9803 \\
+\midrule
+\multirow{7}{*}{MobileNetV3-L}
+ & FP32 & 0.9750 & 0.9732 & 0.9696 & 1.0000 \\
+ & PTQ-INT8 & 0.9577 & 0.9535 & 0.9469 & 0.9707 \\
+ & QAT-INT8 ($\lambda=0$) & 0.9707 & 0.9711 & 0.9714 & 0.9765 \\
+ & QAT-INT8 ($\lambda=0.1$) & 0.9741 & 0.9734 & 0.9726 & 0.9808 \\
+ & QAT-INT8 ($\lambda=0.5$) & 0.9712 & 0.9723 & 0.9719 & 0.9784 \\
+ & QAT-INT8 ($\lambda=1$) & 0.9731 & 0.9737 & 0.9735 & 0.9803 \\
+ & QAT-INT8 ($\lambda=2$) & 0.9726 & 0.9740 & 0.9737 & 0.9808 \\
 \bottomrule
 \end{tabular}

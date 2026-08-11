@@ -1,9 +1,11 @@
-\begin{tabular}{lrrrrrrrrrrrrrrr}
+\begin{tabular}{lcc cc c cc c}
 \toprule
-arch & params\_M & gflops & fp32\_ckpt\_MB & gpu\_ms\_bs1 & gpu\_ms\_bs1\_sd & gpu\_ms\_bs8 & gpu\_ms\_bs8\_sd & cpu\_ms\_bs1 & cpu\_ms\_bs1\_sd & onnx\_fp32\_MB & onnx\_int8\_MB & compression\_x & ort\_cpu\_fp32\_ms & ort\_cpu\_int8\_ms & ort\_cpu\_speedup \\
+ & & & \multicolumn{3}{c}{\textbf{ONNX model size (MB)}} & \multicolumn{3}{c}{\textbf{ORT CPU latency (ms)}} \\
+\cmidrule(lr){4-6} \cmidrule(lr){7-9}
+\textbf{Architecture} & \textbf{Params (M)} & \textbf{GFLOPs} & \textbf{FP32} & \textbf{INT8} & \textbf{Comp.} & \textbf{FP32} & \textbf{INT8} & \textbf{Speedup} \\
 \midrule
-tf\_efficientnetv2\_s & 20.1900 & 5.6970 & 81.6700 & 18.6580 & 1.1200 & 29.5970 & 0.4390 & 97.4800 & 8.0800 & 80.6500 & 22.7700 & 3.5400 & 43.4500 & 39.7500 & 1.0900 \\
-resnet50 & 23.5300 & 8.1740 & 94.4400 & 7.2050 & 1.1320 & 28.2400 & 0.3240 & 83.2200 & 5.6900 & 94.0300 & 24.0400 & 3.9100 & 40.7000 & 31.7700 & 1.2800 \\
-mobilenetv3\_large\_100 & 4.2100 & 0.4310 & 17.0700 & 6.5250 & 0.2770 & 6.9330 & 0.4490 & 27.2200 & 3.2200 & 16.8500 & 4.7000 & 3.5900 & 5.5800 & 8.3000 & 0.6700 \\
+EfficientNetV2-S & 20.19 & 5.697 & 80.7 & 22.8 & 3.54$\times$ & 43.5 & 39.8 & 1.09$\times$ \\
+ResNet-50 & 23.53 & 8.174 & 94.0 & 24.0 & 3.91$\times$ & 40.7 & 31.8 & 1.28$\times$ \\
+MobileNetV3-L & 4.21 & 0.431 & 16.9 & 4.7 & 3.59$\times$ & 5.6 & 8.3 & 0.67$\times$ \\
 \bottomrule
 \end{tabular}

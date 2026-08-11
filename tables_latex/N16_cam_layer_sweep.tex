@@ -1,24 +1,29 @@
-\begin{tabular}{lllrrrr}
+\begin{tabular}{ll l c ccc}
 \toprule
-arch & layer & shape & spatial\_ok & iou & rho & collapse\_rate \\
+\textbf{Architecture} & \textbf{Layer} & \textbf{Output shape} & \textbf{Spatial} & \textbf{Top-$k$ IoU} & \textbf{Spearman $\rho$} & \textbf{Collapse rate} \\
 \midrule
-tf\_efficientnetv2\_s & blocks & (1, 256, 7, 7) & True & 0.7744 & 0.9737 & 0.0000 \\
-tf\_efficientnetv2\_s & conv\_head & (1, 1280, 7, 7) & True & 0.7744 & 0.9737 & 0.0000 \\
-tf\_efficientnetv2\_s & bn2.drop & (1, 1280, 7, 7) & True & 0.7629 & 0.9540 & 0.0000 \\
-tf\_efficientnetv2\_s & bn2.act & (1, 1280, 7, 7) & True & 0.7517 & 0.9446 & 0.0000 \\
-tf\_efficientnetv2\_s & bn2 & (1, 1280, 7, 7) & True & 0.7517 & 0.9446 & 0.0000 \\
-tf\_efficientnetv2\_s & global\_pool.pool & (1, 1280, 1, 1) & False & 0.5660 & 0.2606 & 0.4083 \\
-resnet50 & layer4.2.conv3 & (1, 2048, 7, 7) & True & 0.7404 & 0.8934 & 0.0000 \\
-resnet50 & layer4.2.bn3 & (1, 2048, 7, 7) & True & 0.8011 & 0.9435 & 0.0000 \\
-resnet50 & layer4.2.act3 & (1, 2048, 7, 7) & True & 0.7908 & 0.9350 & 0.0000 \\
-resnet50 & layer4.2 & (1, 2048, 7, 7) & True & 0.7908 & 0.9350 & 0.0000 \\
-resnet50 & layer4 & (1, 2048, 7, 7) & True & 0.7908 & 0.9350 & 0.0000 \\
-resnet50 & global\_pool.pool & (1, 2048, 1, 1) & False & 0.5402 & 0.3249 & 0.2250 \\
-mobilenetv3\_large\_100 & blocks.6.0.bn1 & (1, 960, 7, 7) & True & 0.4737 & 0.7018 & 0.0000 \\
-mobilenetv3\_large\_100 & blocks.6.0.aa & (1, 960, 7, 7) & True & 0.4737 & 0.7018 & 0.0000 \\
-mobilenetv3\_large\_100 & blocks.6.0 & (1, 960, 7, 7) & True & 0.4737 & 0.7018 & 0.0000 \\
-mobilenetv3\_large\_100 & blocks.6 & (1, 960, 7, 7) & True & 0.4737 & 0.7018 & 0.0000 \\
-mobilenetv3\_large\_100 & blocks & (1, 960, 7, 7) & True & 0.4737 & 0.7018 & 0.0000 \\
-mobilenetv3\_large\_100 & act2 & (1, 1280, 1, 1) & False & 0.5784 & 0.2219 & 0.6167 \\
+\multirow{6}{*}{EfficientNetV2-S}
+ & \texttt{blocks} & (1, 256, 7, 7) & yes & 0.774 & 0.974 & 0.000 \\
+ & \texttt{conv\_head} & (1, 1280, 7, 7) & yes & 0.774 & 0.974 & 0.000 \\
+ & \texttt{bn2.drop} & (1, 1280, 7, 7) & yes & 0.763 & 0.954 & 0.000 \\
+ & \texttt{bn2.act} & (1, 1280, 7, 7) & yes & 0.752 & 0.945 & 0.000 \\
+ & \texttt{bn2} & (1, 1280, 7, 7) & yes & 0.752 & 0.945 & 0.000 \\
+ & \texttt{global\_pool.pool} & (1, 1280, 1, 1) & \textbf{no} & \cellcolor{quantred!12}0.566 & \cellcolor{quantred!12}0.261 & \cellcolor{quantred!12}0.408 \\
+\midrule
+\multirow{6}{*}{ResNet-50}
+ & \texttt{layer4.2.conv3} & (1, 2048, 7, 7) & yes & 0.740 & 0.893 & 0.000 \\
+ & \texttt{layer4.2.bn3} & (1, 2048, 7, 7) & yes & 0.801 & 0.944 & 0.000 \\
+ & \texttt{layer4.2.act3} & (1, 2048, 7, 7) & yes & 0.791 & 0.935 & 0.000 \\
+ & \texttt{layer4.2} & (1, 2048, 7, 7) & yes & 0.791 & 0.935 & 0.000 \\
+ & \texttt{layer4} & (1, 2048, 7, 7) & yes & 0.791 & 0.935 & 0.000 \\
+ & \texttt{global\_pool.pool} & (1, 2048, 1, 1) & \textbf{no} & \cellcolor{quantred!12}0.540 & \cellcolor{quantred!12}0.325 & \cellcolor{quantred!12}0.225 \\
+\midrule
+\multirow{6}{*}{MobileNetV3-L}
+ & \texttt{blocks.6.0.bn1} & (1, 960, 7, 7) & yes & 0.474 & 0.702 & 0.000 \\
+ & \texttt{blocks.6.0.aa} & (1, 960, 7, 7) & yes & 0.474 & 0.702 & 0.000 \\
+ & \texttt{blocks.6.0} & (1, 960, 7, 7) & yes & 0.474 & 0.702 & 0.000 \\
+ & \texttt{blocks.6} & (1, 960, 7, 7) & yes & 0.474 & 0.702 & 0.000 \\
+ & \texttt{blocks} & (1, 960, 7, 7) & yes & 0.474 & 0.702 & 0.000 \\
+ & \texttt{act2} & (1, 1280, 1, 1) & \textbf{no} & \cellcolor{quantred!12}0.578 & \cellcolor{quantred!12}0.222 & \cellcolor{quantred!12}0.617 \\
 \bottomrule
 \end{tabular}

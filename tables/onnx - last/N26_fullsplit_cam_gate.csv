@@ -1,7 +1,0 @@
-arch,xai,n,reproduced_iou,published_iou,abs_delta
-tf_efficientnetv2_s,gradcam,320,0.7421,0.736,0.0061
-tf_efficientnetv2_s,gradcampp,320,0.6649,0.667,0.0021
-resnet50,gradcam,320,0.7765,0.7829,0.0064
-resnet50,gradcampp,320,0.7879,0.79,0.0021
-mobilenetv3_large_100,gradcam,320,0.4649,0.4665,0.0016
-mobilenetv3_large_100,gradcampp,320,0.6982,0.6981,0.0001

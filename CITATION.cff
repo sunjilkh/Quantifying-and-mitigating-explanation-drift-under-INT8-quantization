@@ -8,7 +8,7 @@ authors:
     given-names: Sunzil
     email: khandaker15-5383@diu.edu.bd
     affiliation: "Department of Computer Science and Engineering, Daffodil International University, Dhaka, Bangladesh"
-version: "1.0.0"
+version: "1.2.0"
 date-released: "2026-08-09"
 license: CC-BY-4.0
 repository-code: "https://github.com/USERNAME/quantxai-int8-explanation-drift"

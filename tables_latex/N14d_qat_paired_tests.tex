@@ -1,15 +1,17 @@
-\begin{tabular}{llrrrrrrrr}
+\begin{tabular}{llrrrrrrr}
 \toprule
-arch & xai & n\_paired & iou\_base & iou\_qat & delta & collapse\_base & collapse\_qat & p\_raw & p\_holm \\
+\textbf{Architecture} & \textbf{Method} & \textbf{PTQ} & $\boldsymbol{\lambda=0}$ & $\boldsymbol{\lambda=0.5}$ & $\boldsymbol{\Delta}$ \textbf{vs} $\boldsymbol{\lambda=0}$ & $\boldsymbol{\Delta}$ \textbf{vs PTQ} & $\boldsymbol{\delta}$ & $\boldsymbol{p_{\text{Holm}}}$ \\
 \midrule
-mobilenetv3\_large\_100 & gradcam & 320 & 0.4665 & 0.5397 & 0.0732 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 320 & 0.6981 & 0.7288 & 0.0307 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 320 & 0.3659 & 0.4004 & 0.0344 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-resnet50 & gradcam & 320 & 0.7829 & 0.7822 & -0.0007 & 0.0000 & 0.0000 & 0.6461 & 0.8772 \\
-resnet50 & gradcampp & 320 & 0.7900 & 0.7849 & -0.0050 & 0.0000 & 0.0000 & 0.4386 & 0.8772 \\
-resnet50 & ig & 320 & 0.4204 & 0.4074 & -0.0129 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 320 & 0.7360 & 0.6751 & -0.0609 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 320 & 0.6670 & 0.5487 & -0.1183 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 320 & 0.5504 & 0.4131 & -0.1373 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+\multirow{3}{*}{EfficientNetV2-S} & Grad-CAM & 0.7360 & 0.6435 & 0.6751 & $+4.9\%$ & $-12.6\%$ & 0.110 & $<0.001$ \\
+ & Grad-CAM++ & 0.6670 & 0.4795 & 0.5487 & $+14.4\%$ & $-28.1\%$ & 0.302 & $<0.001$ \\
+ & Int.\ Gradients & 0.5504 & 0.3968 & 0.4131 & $+4.1\%$ & $-27.9\%$ & 0.198 & $<0.001$ \\
+\midrule
+\multirow{3}{*}{ResNet-50} & Grad-CAM & 0.7829 & 0.7779 & 0.7822 & $+0.6\%$ & $-0.6\%$ & 0.026 & 0.355 \\
+ & Grad-CAM++ & 0.7900 & 0.7740 & 0.7849 & $+1.4\%$ & $-2.0\%$ & 0.036 & 0.201 \\
+ & Int.\ Gradients & 0.4204 & 0.4019 & 0.4074 & $+1.4\%$ & $-4.4\%$ & 0.051 & $<0.001$ \\
+\midrule
+\multirow{3}{*}{MobileNetV3-Large} & Grad-CAM & 0.4665 & 0.5154 & 0.5397 & $+4.7\%$ & $+10.5\%$ & 0.064 & 0.001 \\
+ & Grad-CAM++ & 0.6981 & 0.7242 & 0.7288 & $+0.6\%$ & $+3.7\%$ & 0.020 & 0.201 \\
+ & Int.\ Gradients & 0.3659 & 0.3936 & 0.4004 & $+1.7\%$ & $+7.6\%$ & 0.104 & $<0.001$ \\
 \bottomrule
 \end{tabular}

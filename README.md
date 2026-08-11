@@ -44,23 +44,28 @@ Every number in the paper is produced by the notebook in this repository and exp
 |-- PROGRESS.json               per-stage timings
 |-- TABLE_INDEX.csv             index of all 34 tables
 |-- tables/                     34 CSVs holding every reported number
-|   `-- onnx/                   4 additional CSVs from ONNX Runtime re-runs (see below)
+|   `-- onnx all/               9 additional CSVs from ONNX Runtime re-runs and revision analyses (see below)
 |-- tables_latex/               the same tables as LaTeX table bodies
 `-- figures/                    8 figures, each as PDF + PNG + SVG
 ```
 
 Model checkpoints (`ckpt/`, 24 files) and ONNX graphs (`onnx/`, 12 files) are **not** in this repository: they exceed GitHub's 100 MB per-file limit. They are in the Zenodo record linked above.
 
-### `tables/onnx/` — ONNX Runtime supplementary tables
+### `tables/onnx all/` — Revision and ONNX Runtime supplementary tables
 
-Four CSVs produced by re-running the calibration and full-split CAM analyses directly through ONNX Runtime (rather than the PyTorch simulate-quantization path used in the main notebook):
+Nine CSVs produced during revision, including re-running analyses directly through ONNX Runtime and providing additional robustness checks:
 
 | File | Contents |
 |---|---|
-| `N25_calibration_matched64.csv` | Calibration sensitivity re-run with a fixed 64-image budget; compares MinMax, Entropy and Percentile across all three backbones and cross-checks against published numbers |
-| `N26_fullsplit_cam.csv` | Full validation-split (2,082 images) Grad-CAM / Grad-CAM++ drift metrics (top-k IoU, Dice, Spearman ρ) for each backbone under ONNX INT8 |
-| `N26_fullsplit_cam_gate.csv` | Gating check: reproduced vs. published top-k IoU for the 320-image subset; all absolute deltas ≤ 0.006, confirming reproducibility |
-| `RAW_fullsplit_cam.csv` | Per-image raw records underlying `N26_fullsplit_cam.csv` (~1.5 MB, 2,082 rows per backbone × method) |
+| `N00_rev3_status.csv` | Revision tracking and status |
+| `N21_qat_vs_lambda0.csv` | QAT mitigation metrics compared directly against a lambda=0 control, with statistical tests |
+| `N21b_lambda_monotonicity.csv` | Verification of top-k IoU monotonicity across the lambda sweep |
+| `N22_agreement_reconciliation.csv` | Reconciliation of top-1 prediction agreement across evaluated subsets |
+| `N23_sample_size_inventory.csv` | Complete inventory of evaluation sample sizes and justifications |
+| `N24_compute_budget.csv` | Estimates of computational overhead for different simulation scopes |
+| `N26_fullsplit_cam.csv` | Full validation-split (2,082 images) Grad-CAM / Grad-CAM++ drift metrics |
+| `N26_fullsplit_cam_gate.csv` | Gating check confirming reproducibility against the 320-image subset |
+| `RAW_fullsplit_cam.csv` | Per-image raw records underlying `N26_fullsplit_cam.csv` |
 
 ## Reproducing
 

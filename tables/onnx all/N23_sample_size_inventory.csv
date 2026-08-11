@@ -1,0 +1,13 @@
+analysis,n,unit,scope,justification
+FP32/INT8 training + accuracy,10407,images,full dataset,"complete Paddy corpus, 80/20 stratified split"
+Validation split,2082,images,full val split,20 percent stratified holdout
+Deployed ORT equivalence (N20),2082,images,full val split,"inference only, no XAI cost"
+Drift: GradCAM/GradCAM++/IG,320,images,stratified subset of val,16x submitted n=20; >2x the n=140 Holm-corrected power requirement
+Drift: LIME,120,images,stratified subset of val,256 forward passes per image
+Faithfulness (insertion/deletion/max-sens),250,images,stratified subset of val,"perturbation curves, 2x50 steps per image"
+Layer-wise diagnostics,128,images,stratified subset of val,per-layer activation capture memory bound
+SIIM-ACR ground-truth localisation,87,cases,all annotated pneumothorax cases,every case with an expert mask
+Calibration subset,64,images,stratified subset of TRAIN,matched cap across all calibrators
+Randomisation sanity check,16,images,stratified subset of val,"directional sanity check, not powered"
+"QAT drift, per lambda arm",320,images,paired across all lambda and seeds,identical images across arms enables paired tests
+Paired drift observations (3 arch x 3 xai x 320),3240,observations,pooled,pooled paired comparisons

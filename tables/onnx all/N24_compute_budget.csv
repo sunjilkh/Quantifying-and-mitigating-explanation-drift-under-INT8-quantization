@@ -1,0 +1,4 @@
+scenario,detail,forward_passes,ratio_vs_current
+Current XAI budget (as reported),3 arch x 2 modes x [320x(GradCAM 2 + GradCAM++ 2 + IG 50) + 120x(LIME 256)],288000,1.0
+"Full split, all four methods",3 arch x 2 modes x 2082 x (2+2+50+256),3872520,13.4
+"Full split, two CAM methods only",3 arch x 2 modes x 2082 x (2+2),49968,0.173

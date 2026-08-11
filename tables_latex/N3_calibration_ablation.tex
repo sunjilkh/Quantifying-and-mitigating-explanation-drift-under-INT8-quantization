@@ -1,21 +1,26 @@
-\begin{tabular}{llllrrrr}
+\begin{tabular}{ll l cc cc}
 \toprule
-arch & engine & calib\_source & calib\_method & n\_calib & agreement & int8\_acc & size\_mb \\
+\textbf{Architecture} & \textbf{Engine} & \textbf{Calib. source} & \textbf{Method} & \textbf{$n_{\text{calib}}$} & \textbf{Agreement} & \textbf{INT8 acc.} \\
 \midrule
-tf\_efficientnetv2\_s & fakequant-qdq & train\_subset(correct) & MinMax & 512 & 0.9844 & 0.9750 & NaN \\
-tf\_efficientnetv2\_s & fakequant-qdq & val\_subset(as-submitted,LEAK) & MinMax & 512 & 0.9969 & 0.9781 & NaN \\
-tf\_efficientnetv2\_s & onnxruntime & train\_subset(correct) & MinMax & 512 & 0.6344 & 0.6406 & 22.7700 \\
-tf\_efficientnetv2\_s & onnxruntime & train\_subset(correct) & Entropy & 64 & 0.7375 & 0.7438 & 22.7700 \\
-tf\_efficientnetv2\_s & onnxruntime & train\_subset(correct) & Percentile & 64 & 0.9156 & 0.9094 & 22.7700 \\
-resnet50 & fakequant-qdq & train\_subset(correct) & MinMax & 512 & 0.9656 & 0.9406 & NaN \\
-resnet50 & fakequant-qdq & val\_subset(as-submitted,LEAK) & MinMax & 512 & 0.9437 & 0.9469 & NaN \\
-resnet50 & onnxruntime & train\_subset(correct) & MinMax & 512 & 0.9000 & 0.8844 & 24.0400 \\
-resnet50 & onnxruntime & train\_subset(correct) & Entropy & 64 & 0.9656 & 0.9563 & 24.0400 \\
-resnet50 & onnxruntime & train\_subset(correct) & Percentile & 64 & 0.9781 & 0.9563 & 24.0400 \\
-mobilenetv3\_large\_100 & fakequant-qdq & train\_subset(correct) & MinMax & 512 & 0.9688 & 0.9594 & NaN \\
-mobilenetv3\_large\_100 & fakequant-qdq & val\_subset(as-submitted,LEAK) & MinMax & 512 & 0.9469 & 0.9313 & NaN \\
-mobilenetv3\_large\_100 & onnxruntime & train\_subset(correct) & MinMax & 512 & 0.5469 & 0.5312 & 4.7000 \\
-mobilenetv3\_large\_100 & onnxruntime & train\_subset(correct) & Entropy & 64 & 0.7688 & 0.7594 & 4.7000 \\
-mobilenetv3\_large\_100 & onnxruntime & train\_subset(correct) & Percentile & 64 & 0.8906 & 0.8750 & 4.7000 \\
+\multirow{5}{*}{EfficientNetV2-S}
+ & Fake-quant & train & MinMax & 512 & 0.9844 & 0.9750 \\
+ & Fake-quant & \textbf{val (leak)} & MinMax & 512 & 0.9969 & 0.9781 \\
+ & ONNX Runtime & train & MinMax & 512 & 0.6344 & 0.6406 \\
+ & ONNX Runtime & train & Entropy & 64 & 0.7375 & 0.7438 \\
+ & ONNX Runtime & train & Percentile & 64 & 0.9156 & 0.9094 \\
+\midrule
+\multirow{5}{*}{ResNet-50}
+ & Fake-quant & train & MinMax & 512 & 0.9656 & 0.9406 \\
+ & Fake-quant & \textbf{val (leak)} & MinMax & 512 & 0.9437 & 0.9469 \\
+ & ONNX Runtime & train & MinMax & 512 & 0.9000 & 0.8844 \\
+ & ONNX Runtime & train & Entropy & 64 & 0.9656 & 0.9563 \\
+ & ONNX Runtime & train & Percentile & 64 & 0.9781 & 0.9563 \\
+\midrule
+\multirow{5}{*}{MobileNetV3-L}
+ & Fake-quant & train & MinMax & 512 & 0.9688 & 0.9594 \\
+ & Fake-quant & \textbf{val (leak)} & MinMax & 512 & 0.9469 & 0.9313 \\
+ & ONNX Runtime & train & MinMax & 512 & 0.5469 & 0.5312 \\
+ & ONNX Runtime & train & Entropy & 64 & 0.7688 & 0.7594 \\
+ & ONNX Runtime & train & Percentile & 64 & 0.8906 & 0.8750 \\
 \bottomrule
 \end{tabular}

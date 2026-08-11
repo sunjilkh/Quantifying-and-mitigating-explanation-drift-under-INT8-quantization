@@ -1,51 +1,20 @@
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{ll ccccc}
 \toprule
-arch & xai & lam & n & iou & dice & rho & collapse\_rate \\
+\textbf{Architecture} & \textbf{Method} & $\lambda=0$ & $\lambda=0.1$ & $\lambda=0.5$ & $\lambda=1$ & $\lambda=2$ \\
 \midrule
-mobilenetv3\_large\_100 & gradcam & 0.0000 & 320 & 0.5154 & 0.6564 & 0.7560 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcam & 0.1000 & 320 & 0.5260 & 0.6675 & 0.7659 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcam & 0.5000 & 960 & 0.5425 & 0.6832 & 0.7818 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcam & 1.0000 & 320 & 0.5537 & 0.6923 & 0.7919 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcam & 2.0000 & 320 & 0.5777 & 0.7155 & 0.8087 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 0.0000 & 320 & 0.7242 & 0.8330 & 0.9185 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 0.1000 & 320 & 0.7220 & 0.8316 & 0.9234 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 0.5000 & 960 & 0.7315 & 0.8383 & 0.9254 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 1.0000 & 320 & 0.7303 & 0.8369 & 0.9261 & 0.0000 \\
-mobilenetv3\_large\_100 & gradcampp & 2.0000 & 320 & 0.7320 & 0.8380 & 0.9293 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 0.0000 & 320 & 0.3936 & 0.5638 & 0.6226 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 0.1000 & 320 & 0.3992 & 0.5696 & 0.6286 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 0.5000 & 960 & 0.3994 & 0.5698 & 0.6284 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 1.0000 & 320 & 0.4025 & 0.5729 & 0.6324 & 0.0000 \\
-mobilenetv3\_large\_100 & ig & 2.0000 & 320 & 0.4095 & 0.5800 & 0.6406 & 0.0000 \\
-resnet50 & gradcam & 0.0000 & 320 & 0.7779 & 0.8698 & 0.9333 & 0.0000 \\
-resnet50 & gradcam & 0.1000 & 320 & 0.7788 & 0.8712 & 0.9321 & 0.0000 \\
-resnet50 & gradcam & 0.5000 & 960 & 0.7792 & 0.8704 & 0.9311 & 0.0000 \\
-resnet50 & gradcam & 1.0000 & 320 & 0.7772 & 0.8695 & 0.9374 & 0.0000 \\
-resnet50 & gradcam & 2.0000 & 320 & 0.7878 & 0.8765 & 0.9400 & 0.0000 \\
-resnet50 & gradcampp & 0.0000 & 320 & 0.7740 & 0.8679 & 0.9533 & 0.0000 \\
-resnet50 & gradcampp & 0.1000 & 320 & 0.7777 & 0.8712 & 0.9520 & 0.0000 \\
-resnet50 & gradcampp & 0.5000 & 960 & 0.7824 & 0.8729 & 0.9510 & 0.0000 \\
-resnet50 & gradcampp & 1.0000 & 320 & 0.7767 & 0.8700 & 0.9520 & 0.0000 \\
-resnet50 & gradcampp & 2.0000 & 320 & 0.7864 & 0.8756 & 0.9572 & 0.0000 \\
-resnet50 & ig & 0.0000 & 320 & 0.4019 & 0.5702 & 0.6524 & 0.0000 \\
-resnet50 & ig & 0.1000 & 320 & 0.4107 & 0.5795 & 0.6680 & 0.0000 \\
-resnet50 & ig & 0.5000 & 960 & 0.4093 & 0.5780 & 0.6645 & 0.0000 \\
-resnet50 & ig & 1.0000 & 320 & 0.4118 & 0.5805 & 0.6670 & 0.0000 \\
-resnet50 & ig & 2.0000 & 320 & 0.4058 & 0.5741 & 0.6538 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 0.0000 & 320 & 0.6435 & 0.7716 & 0.8709 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 0.1000 & 320 & 0.6606 & 0.7852 & 0.8819 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 0.5000 & 960 & 0.6732 & 0.7959 & 0.8967 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 1.0000 & 320 & 0.6898 & 0.8086 & 0.9099 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcam & 2.0000 & 320 & 0.7054 & 0.8208 & 0.9161 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 0.0000 & 320 & 0.4795 & 0.6359 & 0.6598 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 0.1000 & 320 & 0.5033 & 0.6590 & 0.6891 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 0.5000 & 960 & 0.5505 & 0.7012 & 0.7376 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 1.0000 & 320 & 0.5567 & 0.7062 & 0.7513 & 0.0000 \\
-tf\_efficientnetv2\_s & gradcampp & 2.0000 & 320 & 0.5871 & 0.7323 & 0.7766 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 0.0000 & 320 & 0.3968 & 0.5664 & 0.6478 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 0.1000 & 320 & 0.4024 & 0.5724 & 0.6545 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 0.5000 & 960 & 0.4071 & 0.5772 & 0.6594 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 1.0000 & 320 & 0.4206 & 0.5907 & 0.6723 & 0.0000 \\
-tf\_efficientnetv2\_s & ig & 2.0000 & 320 & 0.4288 & 0.5987 & 0.6805 & 0.0000 \\
+\multirow{3}{*}{EfficientNetV2-S}
+ & Grad-CAM & 0.643 & 0.661 & 0.673 & 0.690 & 0.705 \\
+ & Grad-CAM++ & 0.479 & 0.503 & 0.550 & 0.557 & 0.587 \\
+ & Int.\ Gradients & 0.397 & 0.402 & 0.407 & 0.421 & 0.429 \\
+\midrule
+\multirow{3}{*}{ResNet-50}
+ & Grad-CAM & 0.778 & 0.779 & 0.779 & 0.777 & 0.788 \\
+ & Grad-CAM++ & 0.774 & 0.778 & 0.782 & 0.777 & 0.786 \\
+ & Int.\ Gradients & 0.402 & 0.411 & 0.409 & 0.412 & 0.406 \\
+\midrule
+\multirow{3}{*}{MobileNetV3-L}
+ & Grad-CAM & 0.515 & 0.526 & 0.542 & 0.554 & 0.578 \\
+ & Grad-CAM++ & 0.724 & 0.722 & 0.732 & 0.730 & 0.732 \\
+ & Int.\ Gradients & 0.394 & 0.399 & 0.399 & 0.403 & 0.409 \\
 \bottomrule
 \end{tabular}

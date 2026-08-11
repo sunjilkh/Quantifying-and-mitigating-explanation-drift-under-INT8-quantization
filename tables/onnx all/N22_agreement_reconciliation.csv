@@ -1,0 +1,10 @@
+arch,sim,source,n_images,agreement,fp32_accuracy_subset,agreement_invariant_across_k
+tf_efficientnetv2_s,legacy,RAW_drift_all (drift run),320,0.9812,0.9812,True
+tf_efficientnetv2_s,qdq,RAW_drift_all (drift run),320,0.9844,0.9812,True
+resnet50,legacy,RAW_drift_all (drift run),320,0.5531,0.9688,True
+resnet50,qdq,RAW_drift_all (drift run),320,0.9656,0.9688,True
+mobilenetv3_large_100,legacy,RAW_drift_all (drift run),320,0.7625,0.9781,True
+mobilenetv3_large_100,qdq,RAW_drift_all (drift run),320,0.9625,0.9781,True
+tf_efficientnetv2_s,qdq,N3 calibration-ablation run,320,0.9844,,True
+resnet50,qdq,N3 calibration-ablation run,320,0.9656,,True
+mobilenetv3_large_100,qdq,N3 calibration-ablation run,320,0.9688,,True
