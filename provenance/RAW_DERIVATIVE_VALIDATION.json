@@ -1,0 +1,114 @@
+[
+  {
+    "table": "T6_drift_by_model_method",
+    "rows": 24,
+    "numeric_columns": [
+      "n",
+      "iou",
+      "iou_sd",
+      "dice",
+      "dice_sd",
+      "rho",
+      "rho_sd",
+      "collapse_rate"
+    ],
+    "maximum_absolute_difference": 4.97889163515175e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "T7_drift_by_method",
+    "rows": 8,
+    "numeric_columns": [
+      "n",
+      "iou",
+      "iou_sd",
+      "dice",
+      "rho",
+      "rho_sd",
+      "cv_iou",
+      "iou_over_chance"
+    ],
+    "maximum_absolute_difference": 4.990360027037899e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "N5_k_sweep",
+    "rows": 144,
+    "numeric_columns": [
+      "iou",
+      "dice",
+      "rho",
+      "n"
+    ],
+    "maximum_absolute_difference": 4.9663022186619e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "N7_collapse_rates",
+    "rows": 24,
+    "numeric_columns": [
+      "n",
+      "collapse_rate",
+      "fp32_collapsed",
+      "int8_collapsed",
+      "mean_levels_int8"
+    ],
+    "maximum_absolute_difference": 5.0000002374872565e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "T5_prediction_agreement",
+    "rows": 6,
+    "numeric_columns": [
+      "n",
+      "agreement",
+      "fp32_accuracy"
+    ],
+    "maximum_absolute_difference": 4.999999999999449e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "N10_lambda_sweep",
+    "rows": 45,
+    "numeric_columns": [
+      "n",
+      "iou",
+      "dice",
+      "rho",
+      "collapse_rate"
+    ],
+    "maximum_absolute_difference": 4.925711062386817e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "T8_qat_mitigation",
+    "rows": 9,
+    "numeric_columns": [
+      "base_iou",
+      "base_dice",
+      "base_rho",
+      "base_n",
+      "mit_n",
+      "mit_iou",
+      "mit_dice",
+      "mit_rho",
+      "collapse_rate",
+      "delta_iou_pct",
+      "delta_dice_pct",
+      "delta_rho_pct"
+    ],
+    "maximum_absolute_difference": 4.916135588550752e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  },
+  {
+    "table": "N11_seed_variability",
+    "rows": 9,
+    "numeric_columns": [
+      "mean",
+      "std",
+      "count"
+    ],
+    "maximum_absolute_difference": 4.06222038000139e-05,
+    "status": "verified against archived raw data, not a new inference run"
+  }
+]

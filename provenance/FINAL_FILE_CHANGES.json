@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-04",
+  "changes": [
+    {
+      "file": "Audit_Notebook_Results.ipynb",
+      "action": "added"
+    },
+    {
+      "file": "CITATION.cff",
+      "action": "modified"
+    },
+    {
+      "file": "FINAL_AUDIT.md",
+      "action": "added"
+    },
+    {
+      "file": "MANIFEST.json",
+      "action": "modified"
+    },
+    {
+      "file": "PROGRESS.json",
+      "action": "modified"
+    },
+    {
+      "file": "README.md",
+      "action": "modified"
+    },
+    {
+      "file": "REGEN_FIGURES.py",
+      "action": "modified"
+    },
+    {
+      "file": "REPOSITORY_UPDATE.md",
+      "action": "modified"
+    },
+    {
+      "file": "ZENODO_RELEASE_GUIDE.md",
+      "action": "added"
+    },
+    {
+      "file": "audit_release.py",
+      "action": "added"
+    },
+    {
+      "file": "main.tex",
+      "action": "modified"
+    },
+    {
+      "file": "provenance/CSV_AUDIT.csv",
+      "action": "modified"
+    },
+    {
+      "file": "provenance/EXTRA_STATISTICAL_VALIDATION.json",
+      "action": "added"
+    },
+    {
+      "file": "provenance/FINAL_AUDIT_VALIDATION.json",
+      "action": "added"
+    },
+    {
+      "file": "provenance/MANUSCRIPT_FINAL_CHANGES.diff",
+      "action": "added"
+    },
+    {
+      "file": "provenance/superseded_originals/REGEN_FIGURES.py",
+      "action": "added"
+    },
+    {
+      "file": "requirements.txt",
+      "action": "modified"
+    }
+  ],
+  "experimental_csv_values_changed": false,
+  "original_research_notebooks_changed": false
+}

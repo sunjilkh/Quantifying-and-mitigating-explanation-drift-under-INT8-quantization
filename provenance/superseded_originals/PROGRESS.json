@@ -1,0 +1,94 @@
+{
+  "profile": "full",
+  "last_stage": "FINAL - qualitative CAM panel (PATCH 2)",
+  "elapsed_min": 15.2,
+  "timing": {
+    "CELL 4 - FP32 training (Table 3)": 61.4,
+    "CELL 5 - CAM target layers (Table N2)": 1.5,
+    "CELL 6 - fake-quant models (legacy vs qdq)": 18.3,
+    "CELL 8b - random-overlap baselines (Table N6)": 1.4,
+    "CELL 15 - SIIM-ACR ground-truth localisation": 242.9,
+    "FINAL - qualitative CAM panel (PATCH 2)": 12.0
+  },
+  "skipped": [],
+  "tables": [
+    "N10_lambda_sweep",
+    "N11_seed_variability",
+    "N12_post_qat_performance",
+    "N13_faithfulness",
+    "N13b_randomization_sanity",
+    "N14a_bootstrap_ci",
+    "N14b_paired_tests_holm",
+    "N14c_power_analysis",
+    "N14d_qat_paired_tests",
+    "N15_fakequant_config",
+    "N16_cam_layer_sweep",
+    "N17_siim_ground_truth",
+    "N17b_siim_summary",
+    "N18_imbalance_vs_drift",
+    "N19_dataset_composition",
+    "N1_efficiency",
+    "N2_cam_target_layers",
+    "N3_calibration_ablation",
+    "N4_equivalence_cka",
+    "N5_k_sweep",
+    "N5b_ranking_stability_over_k",
+    "N6_random_baselines",
+    "N7_collapse_rates",
+    "N8_layerwise_collapse",
+    "N9_mixed_precision",
+    "RAW_drift_all",
+    "RAW_qat_drift",
+    "S2_per_class_drift",
+    "T3_fp32_performance",
+    "T3b_training_history",
+    "T5_prediction_agreement",
+    "T6_drift_by_model_method",
+    "T7_drift_by_method",
+    "T8_qat_mitigation"
+  ],
+  "memlog": [
+    {
+      "stage": "CELL 4 - FP32 training (Table 3)",
+      "sec": 61.4,
+      "peak_gib": 0.97,
+      "ram": "2.8/31.3 GiB",
+      "failed": false
+    },
+    {
+      "stage": "CELL 5 - CAM target layers (Table N2)",
+      "sec": 1.5,
+      "peak_gib": 2.83,
+      "ram": "2.7/31.3 GiB",
+      "failed": false
+    },
+    {
+      "stage": "CELL 6 - fake-quant models (legacy vs qdq)",
+      "sec": 18.3,
+      "peak_gib": 3.33,
+      "ram": "3.0/31.3 GiB",
+      "failed": false
+    },
+    {
+      "stage": "CELL 8b - random-overlap baselines (Table N6)",
+      "sec": 1.4,
+      "peak_gib": 0.56,
+      "ram": "3.0/31.3 GiB",
+      "failed": false
+    },
+    {
+      "stage": "CELL 15 - SIIM-ACR ground-truth localisation",
+      "sec": 242.9,
+      "peak_gib": 4.45,
+      "ram": "3.8/31.3 GiB",
+      "failed": false
+    },
+    {
+      "stage": "FINAL - qualitative CAM panel (PATCH 2)",
+      "sec": 12.0,
+      "peak_gib": 5.54,
+      "ram": "3.9/31.3 GiB",
+      "failed": false
+    }
+  ]
+}

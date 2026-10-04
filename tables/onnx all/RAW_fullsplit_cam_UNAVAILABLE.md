@@ -1,0 +1,2 @@
+# Full-split raw records not recoverable from notebook output
+The selected notebook prints six aggregate rows and six reproduction-gate logs, not12492 individual image records. No replacement RAW_fullsplit_cam.csv has been created. The v1.3 raw file belongs to the conflicting CSV-backed run and is preserved byte-for-byte at provenance/superseded_originals/tables/onnx all/RAW_fullsplit_cam.csv. It must not be used to validate the restored notebook-summary values. The matching raw export or a fresh model/calibration rerun is still needed for per-image reproducibility.

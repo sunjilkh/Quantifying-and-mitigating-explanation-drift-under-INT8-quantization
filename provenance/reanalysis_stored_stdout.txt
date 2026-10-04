@@ -1,0 +1,111 @@
+onnxruntime available: True
+[    7.6s] search roots: ['/kaggle/input', '/kaggle/working']
+[    7.7s] RAW_qat_drift      : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/RAW_qat_drift.csv
+[    7.7s] RAW_drift_all      : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/RAW_drift_all.csv
+[    7.7s] T8_qat_mitigation  : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/T8_qat_mitigation.csv
+[    7.7s] N10_lambda_sweep   : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/N10_lambda_sweep.csv
+[    7.7s] N3_calib_ablation  : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/N3_calibration_ablation.csv
+[    7.7s] T5_pred_agreement  : /kaggle/input/datasets/sunzilkhandaker/quantxai-endgame/tables/T5_prediction_agreement.csv
+[    9.1s] paddy: 10407 images / 10 classes @ /kaggle/input/datasets/imbikramsaha/paddy-doctor/paddy-disease-classification/train_images
+[    9.1s] split: train=8325 val=2082  (paper: 8325 / 2082)
+[    9.3s] CONTAINMENT GATE: 320/320 published eval images in val, 0 leaked into train
+[    9.3s]    gate PASSED - val split reproduces the original run exactly
+[    9.3s] SPLIT_reconstruction         OK       paddy=10407 val=2082 train=8325 containment=320/320 (1.7s)
+[ 1160.5s] fp32 graphs: {'tf_efficientnetv2_s': 'tf_efficientnetv2_s_fp32.onnx', 'resnet50': 'resnet50_fp32.onnx', 'mobilenetv3_large_100': 'mobilenetv3_large_100_fp32.onnx'}
+[ 1161.7s] calibration tensor: (60, 3, 224, 224) (fixed for every method and architecture)
+[ 1161.7s] eval subset: 320 images (exact published subset = True)
+[ 1216.7s]    tf_efficientnetv2_s    MinMax      agreement=0.5281 int8_acc=0.5281
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'entropy' algorithm ...
+Number of tensors : 613
+Number of histogram bins : 128 (The number may increase depends on the data it collects)
+Number of quantized bins : 128
+[ 1288.1s]    tf_efficientnetv2_s    Entropy     agreement=0.5281 int8_acc=0.5281
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'percentile' algorithm ...
+Number of tensors : 613
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[ 1360.0s]    tf_efficientnetv2_s    Percentile  agreement=0.9062 int8_acc=0.9000
+[ 1393.4s]    resnet50               MinMax      agreement=0.9313 int8_acc=0.9156
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'entropy' algorithm ...
+Number of tensors : 123
+Number of histogram bins : 128 (The number may increase depends on the data it collects)
+Number of quantized bins : 128
+[ 1440.9s]    resnet50               Entropy     agreement=0.9313 int8_acc=0.9156
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'percentile' algorithm ...
+Number of tensors : 123
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[ 1491.1s]    resnet50               Percentile  agreement=0.9781 int8_acc=0.9625
+[ 1499.7s]    mobilenetv3_large_100  MinMax      agreement=0.7719 int8_acc=0.7625
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'entropy' algorithm ...
+Number of tensors : 162
+Number of histogram bins : 128 (The number may increase depends on the data it collects)
+Number of quantized bins : 128
+[ 1516.8s]    mobilenetv3_large_100  Entropy     agreement=0.7719 int8_acc=0.7625
+Collecting tensor data and making histogram ...
+Finding optimal threshold for each tensor using 'percentile' algorithm ...
+Number of tensors : 162
+Number of histogram bins : 2048
+Percentile : (0.0010000000000047748,99.999)
+[ 1534.6s]    mobilenetv3_large_100  Percentile  agreement=0.8938 int8_acc=0.8781
+[ 1534.6s] FIDELITY GATE: max |rebuilt - published| on the already-n=64 arms = 0.2094
+[ 1534.6s]    saved /kaggle/working/rev3/N25_calibration_matched64.csv  (9 rows)
+[ 1534.6s] D_calib_matched64            OK       9 rows, matched n_calib=64 for all calibrators (1525.3s)
+                 arch      engine calib_source calib_method  n_calib  n_eval  agreement  int8_acc  fp32_acc  size_mb  published_n_calib  published_agreement  published_int8_acc  delta_vs_published  rebuild_fidelity_maxabs_delta_at_matched_n
+  tf_efficientnetv2_s onnxruntime train_subset       MinMax       64     320     0.5281    0.5281    0.9812    22.77                512               0.6344              0.6406             -0.1063                                      0.2094
+  tf_efficientnetv2_s onnxruntime train_subset      Entropy       64     320     0.5281    0.5281    0.9812    22.77                 64               0.7375              0.7438             -0.2094                                      0.2094
+  tf_efficientnetv2_s onnxruntime train_subset   Percentile       64     320     0.9062    0.9000    0.9812    22.77                 64               0.9156              0.9094             -0.0094                                      0.2094
+             resnet50 onnxruntime train_subset       MinMax       64     320     0.9313    0.9156    0.9688    24.04                512               0.9000              0.8844              0.0313                                      0.2094
+             resnet50 onnxruntime train_subset      Entropy       64     320     0.9313    0.9156    0.9688    24.04                 64               0.9656              0.9563             -0.0343                                      0.2094
+             resnet50 onnxruntime train_subset   Percentile       64     320     0.9781    0.9625    0.9688    24.04                 64               0.9781              0.9563              0.0000                                      0.2094
+mobilenetv3_large_100 onnxruntime train_subset       MinMax       64     320     0.7719    0.7625    0.9781     4.70                512               0.5469              0.5312              0.2250                                      0.2094
+mobilenetv3_large_100 onnxruntime train_subset      Entropy       64     320     0.7719    0.7625    0.9781     4.70                 64               0.7688              0.7594              0.0031                                      0.2094
+mobilenetv3_large_100 onnxruntime train_subset   Percentile       64     320     0.8938    0.8781    0.9781     4.70                 64               0.8906              0.8750              0.0032                                      0.2094
+[ 2766.2s] checkpoints: {'tf_efficientnetv2_s': 'tf_efficientnetv2_s_fp32_s42.pt', 'resnet50': 'resnet50_fp32_s42.pt', 'mobilenetv3_large_100': 'mobilenetv3_large_100_fp32_s42.pt'}
+[ 2774.6s] fake-quant calibration tensor: (512, 3, 224, 224)
+[ 2781.0s]    tf_efficientnetv2_s CAM layer=bn2
+[ 2854.7s]       GATE gradcam    reproduced=0.7421 published=0.7360
+[ 2854.8s]       GATE gradcampp  reproduced=0.6649 published=0.6670
+[ 3339.6s]       full split done: 4164 rows
+[ 3343.3s]    resnet50 CAM layer=layer4
+[ 3419.6s]       GATE gradcam    reproduced=0.7765 published=0.7829
+[ 3419.7s]       GATE gradcampp  reproduced=0.7879 published=0.7900
+[ 3922.0s]       full split done: 4164 rows
+[ 3923.2s]    mobilenetv3_large_100 CAM layer=blocks
+[ 3990.1s]       GATE gradcam    reproduced=0.4649 published=0.4665
+[ 3990.2s]       GATE gradcampp  reproduced=0.6982 published=0.6981
+[ 4418.8s]       full split done: 4164 rows
+[ 4418.8s]    saved /kaggle/working/rev3/N26_fullsplit_cam_gate.csv  (6 rows)
+[ 4418.9s]    saved /kaggle/working/rev3/RAW_fullsplit_cam.csv  (12492 rows)
+[ 4418.9s]    saved /kaggle/working/rev3/N26_fullsplit_cam.csv  (6 rows)
+[ 4418.9s] E_fullsplit_cam              OK       3 archs, 12492 rows (2884.3s)
+                 arch       xai    n    iou   dice    rho  agreement  collapse_rate
+mobilenetv3_large_100   gradcam 2082 0.4591 0.6020 0.6845     0.9693            0.0
+mobilenetv3_large_100 gradcampp 2082 0.6841 0.8026 0.8846     0.9693            0.0
+             resnet50   gradcam 2082 0.7703 0.8638 0.9260     0.9707            0.0
+             resnet50 gradcampp 2082 0.7781 0.8710 0.9519     0.9707            0.0
+  tf_efficientnetv2_s   gradcam 2082 0.7285 0.8375 0.9429     0.9923            0.0
+  tf_efficientnetv2_s gradcampp 2082 0.6678 0.7947 0.8590     0.9923            0.0
+[ 4419.0s]    saved /kaggle/working/rev3/N00_rev3_status.csv  (3 rows)
+
+==============================================================================
+CELL 23 COMPLETE in 4419.0 s
+==============================================================================
+                task status                                                     detail
+SPLIT_reconstruction     OK paddy=10407 val=2082 train=8325 containment=320/320 (1.7s)
+   D_calib_matched64     OK   9 rows, matched n_calib=64 for all calibrators (1525.3s)
+     E_fullsplit_cam     OK                              3 archs, 12492 rows (2884.3s)
+
+Files written to /kaggle/working/rev3:
+   N00_rev3_status.csv                             0.2 KB
+   N25_calibration_matched64.csv                   1.2 KB
+   N26_fullsplit_cam.csv                           0.4 KB
+   N26_fullsplit_cam_gate.csv                      0.3 KB
+   RAW_fullsplit_cam.csv                        1497.4 KB
+
+3/3 tasks OK. Tasks marked SKIPPED did not error the notebook.

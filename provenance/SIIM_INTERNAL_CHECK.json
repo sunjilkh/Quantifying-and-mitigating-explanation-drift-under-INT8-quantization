@@ -1,0 +1,16 @@
+[
+  {
+    "model": "fp32",
+    "rows": 87,
+    "mean_iou": 0.006596551724137931,
+    "stored_mean_iou": 0.0066,
+    "matches_displayed_rounding": true
+  },
+  {
+    "model": "int8-qdq",
+    "rows": 87,
+    "mean_iou": 0.010616091954022988,
+    "stored_mean_iou": 0.0106,
+    "matches_displayed_rounding": true
+  }
+]

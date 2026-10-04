@@ -2,7 +2,7 @@
 # Quant-XAI - reproducibility requirements
 #
 # Environment as recorded by CELL 0 of the deposited notebook for the
-# run that produced every table and figure in the manuscript:
+# primary saved run. Follow-up/recovery environments are not fully recorded:
 #   Kaggle Notebooks, 1x NVIDIA Tesla T4 (sm_75), CUDA 12.8
 #
 # This lists the DIRECT imports of the pipeline only. Transitive

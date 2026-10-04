@@ -1,0 +1,41 @@
+file,key,column,original,restored
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcam,iou,0.4009,0.4591
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcam,dice,0.5369,0.6020
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcam,rho,0.5862,0.6845
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcam,agreement,0.9625,0.9693
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcampp,iou,0.6457,0.6841
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcampp,dice,0.7711,0.8026
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcampp,rho,0.8364,0.8846
+tables/onnx all/N26_fullsplit_cam.csv,mobilenetv3_large_100|gradcampp,agreement,0.9625,0.9693
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcam,iou,0.7903,0.7703
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcam,dice,0.8784,0.8638
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcam,rho,0.9438,0.9260
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcam,agreement,0.9904,0.9707
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcampp,iou,0.7887,0.7781
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcampp,dice,0.8781,0.8710
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcampp,rho,0.9584,0.9519
+tables/onnx all/N26_fullsplit_cam.csv,resnet50|gradcampp,agreement,0.9904,0.9707
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcam,iou,0.7457,0.7285
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcam,dice,0.8497,0.8375
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcam,rho,0.9545,0.9429
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcam,agreement,0.9971,0.9923
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcampp,iou,0.6674,0.6678
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcampp,dice,0.7953,0.7947
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcampp,rho,0.8697,0.8590
+tables/onnx all/N26_fullsplit_cam.csv,tf_efficientnetv2_s|gradcampp,agreement,0.9971,0.9923
+tables/onnx all/N26_fullsplit_cam_gate.csv,tf_efficientnetv2_s|gradcam,reproduced_iou,0.7554,0.7421
+tables/onnx all/N26_fullsplit_cam_gate.csv,tf_efficientnetv2_s|gradcam,abs_delta,0.0193,0.0061
+tables/onnx all/N26_fullsplit_cam_gate.csv,tf_efficientnetv2_s|gradcampp,reproduced_iou,0.6741,0.6649
+tables/onnx all/N26_fullsplit_cam_gate.csv,tf_efficientnetv2_s|gradcampp,abs_delta,0.0071,0.0021
+tables/onnx all/N26_fullsplit_cam_gate.csv,resnet50|gradcam,reproduced_iou,0.7939,0.7765
+tables/onnx all/N26_fullsplit_cam_gate.csv,resnet50|gradcam,abs_delta,0.0109,0.0064
+tables/onnx all/N26_fullsplit_cam_gate.csv,resnet50|gradcampp,reproduced_iou,0.8037,0.7879
+tables/onnx all/N26_fullsplit_cam_gate.csv,resnet50|gradcampp,abs_delta,0.0138,0.0021
+tables/onnx all/N26_fullsplit_cam_gate.csv,mobilenetv3_large_100|gradcam,reproduced_iou,0.4214,0.4649
+tables/onnx all/N26_fullsplit_cam_gate.csv,mobilenetv3_large_100|gradcam,abs_delta,0.0451,0.0016
+tables/onnx all/N26_fullsplit_cam_gate.csv,mobilenetv3_large_100|gradcampp,reproduced_iou,0.6593,0.6982
+tables/onnx all/N26_fullsplit_cam_gate.csv,mobilenetv3_large_100|gradcampp,abs_delta,0.0389,0.0001
+tables/onnx all/N00_rev3_status.csv,SPLIT_reconstruction,detail,paddy=10407 val=2082 train=8325 eval320_resolvable=True (133.8s),paddy=10407 val=2082 train=8325 containment=320/320 (1.7s)
+tables/onnx all/N00_rev3_status.csv,D_calib_matched64,status,SKIPPED,OK
+tables/onnx all/N00_rev3_status.csv,D_calib_matched64,detail,ModuleNotFoundError: No module named 'onnxruntime',"9 rows, matched n_calib=64 for all calibrators (1525.3s)"
+tables/onnx all/N00_rev3_status.csv,E_fullsplit_cam,detail,"3 archs, 12492 rows (2480.1s)","3 archs, 12492 rows (2884.3s)"

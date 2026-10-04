@@ -1,0 +1,54 @@
+[
+  {
+    "table": "N14a_bootstrap_ci",
+    "max_diffs": {
+      "n": 0.0,
+      "mean": 0.0,
+      "ci_lo": 0.0,
+      "ci_hi": 0.0,
+      "sig_vs_zero": 0.0
+    },
+    "pass": true
+  },
+  {
+    "table": "N14b_paired_tests_holm",
+    "max_diffs": {
+      "n_pairs": 0.0,
+      "mean_diff": 0.0,
+      "cohens_dz": 0.0,
+      "cliffs_delta": 0.0,
+      "p_raw": 0.0,
+      "n_for_80pct_power": 0.0,
+      "achieved_power": 0.0,
+      "p_holm": 0.0,
+      "significant_holm": 0.0
+    },
+    "pass": true
+  },
+  {
+    "table": "N14c_power_analysis",
+    "max_diffs": {
+      "observed_sd": 0.0,
+      "cohens_d": 0.0,
+      "n_needed_80": 0.0,
+      "power_at_n20": 0.0,
+      "power_at_actual_n": 0.0,
+      "actual_n": 0.0
+    },
+    "pass": true
+  },
+  {
+    "table": "N14d_qat_paired_tests",
+    "max_diffs": {
+      "n_paired": 0.0,
+      "iou_base": 0.0,
+      "iou_qat": 0.0,
+      "delta": 0.0,
+      "collapse_base": 0.0,
+      "collapse_qat": 0.0,
+      "p_raw": 0.0,
+      "p_holm": 0.0
+    },
+    "pass": true
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "file": "quantxai-revision.ipynb",
+      "size_bytes": 212172,
+      "sha256": "1ac02c99eddcbd3c650b6039a503ef3fc3a5df7da8603a56787abd1edc9a8e39"
+    },
+    {
+      "file": "qat_calibration_reanalysis.ipynb",
+      "size_bytes": 51936,
+      "sha256": "080ad9046fdd9dde639f282c313d4b0f7d1c704c8e668ad65f551b83a9af015f"
+    },
+    {
+      "file": "quantxai-revision-oneshot-3.ipynb",
+      "size_bytes": 257285,
+      "sha256": "3062cc4f5f97455a56c11671671baef63d91555f8d863e7dcac20f2f6bd4e5cc"
+    }
+  ],
+  "primary_vs_oneshot_byte_identical": false,
+  "primary_cells": 26,
+  "oneshot_cells": 27,
+  "first24_cell_sources_equal": true,
+  "additional_oneshot_cell24_has_same_reanalysis_stdout": true,
+  "primary_final_plotting_source_equals_oneshot_final_plotting_source": true,
+  "recommendation": "KEEP oneshot: not a duplicate; it contains the additional full-split/calibration source and stored output."
+}

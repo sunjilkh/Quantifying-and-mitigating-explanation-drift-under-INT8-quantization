@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-04",
+  "model_inference_performed": false,
+  "checks": [
+    {
+      "table": "T6_drift_by_model_method",
+      "rows": 24,
+      "max_absolute_difference": 4.97889163515175e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "T7_drift_by_method",
+      "rows": 8,
+      "max_absolute_difference": 4.990360027037899e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "N5_k_sweep",
+      "rows": 144,
+      "max_absolute_difference": 4.9663022186619e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "N7_collapse_rates",
+      "rows": 24,
+      "max_absolute_difference": 5.0000002374872565e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "T5_prediction_agreement",
+      "rows": 6,
+      "max_absolute_difference": 4.999999999999449e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "N10_lambda_sweep",
+      "rows": 45,
+      "max_absolute_difference": 4.925711062386817e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "T8_qat_mitigation",
+      "rows": 9,
+      "max_absolute_difference": 4.916135588550752e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "N11_seed_variability",
+      "rows": 9,
+      "max_absolute_difference": 4.06222038000139e-05,
+      "status": "PASS"
+    },
+    {
+      "table": "N14a_bootstrap_ci",
+      "rows": 36,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "N14b_paired_tests_holm",
+      "rows": 6,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "N14c_power_analysis",
+      "rows": 6,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "N14d_qat_paired_tests",
+      "rows": 9,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "onnx all/N26_fullsplit_cam",
+      "rows": 6,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "onnx all/N25_calibration_matched64",
+      "rows": 9,
+      "max_absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "table": "onnx all/N21_qat_vs_lambda0",
+      "rows": 9,
+      "status": "PASS seed42 means and paired tests; rounded p-value tolerance 0.6%"
+    }
+  ],
+  "headline_checks": {
+    "primary_pairs": 3240,
+    "distinct_images": 320,
+    "collapsed": 0,
+    "median_spearman": 0.8499017835995422,
+    "mean_iou_min": 0.3659052123183032,
+    "mean_iou_max": 0.7899733807391802,
+    "negative_spearman_records": 2
+  },
+  "limitations": [
+    "Full-split and matched-calibration validation is against rounded saved output only; matching per-image records absent.",
+    "SIIM repair execution is not substantiated by saved outputs.",
+    "No model inference, original saliency-map recomputation, or public-deposit verification.",
+    "Some auxiliary tables have no recoverable source records; retained with provenance, not declared independently reproduced."
+  ]
+}

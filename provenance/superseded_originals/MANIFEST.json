@@ -1,0 +1,142 @@
+{
+  "tables": {
+    "N10_lambda_sweep": [
+      45,
+      8
+    ],
+    "N11_seed_variability": [
+      9,
+      5
+    ],
+    "N12_post_qat_performance": [
+      27,
+      8
+    ],
+    "N13_faithfulness": [
+      12,
+      10
+    ],
+    "N13b_randomization_sanity": [
+      9,
+      4
+    ],
+    "N14a_bootstrap_ci": [
+      36,
+      8
+    ],
+    "N14b_paired_tests_holm": [
+      6,
+      10
+    ],
+    "N14c_power_analysis": [
+      6,
+      8
+    ],
+    "N14d_qat_paired_tests": [
+      9,
+      10
+    ],
+    "N15_fakequant_config": [
+      6,
+      6
+    ],
+    "N16_cam_layer_sweep": [
+      18,
+      7
+    ],
+    "N18_imbalance_vs_drift": [
+      3,
+      6
+    ],
+    "N19_dataset_composition": [
+      10,
+      4
+    ],
+    "N1_efficiency": [
+      3,
+      16
+    ],
+    "N2_cam_target_layers": [
+      3,
+      8
+    ],
+    "N3_calibration_ablation": [
+      15,
+      8
+    ],
+    "N4_equivalence_cka": [
+      9,
+      21
+    ],
+    "N5_k_sweep": [
+      144,
+      8
+    ],
+    "N5b_ranking_stability_over_k": [
+      24,
+      5
+    ],
+    "N6_random_baselines": [
+      6,
+      5
+    ],
+    "N7_collapse_rates": [
+      24,
+      8
+    ],
+    "N8_layerwise_collapse": [
+      48,
+      12
+    ],
+    "N9_mixed_precision": [
+      3,
+      8
+    ],
+    "RAW_drift_all": [
+      38880,
+      19
+    ],
+    "RAW_qat_drift": [
+      120960,
+      21
+    ],
+    "S2_per_class_drift": [
+      30,
+      7
+    ],
+    "T3_fp32_performance": [
+      3,
+      5
+    ],
+    "T3b_training_history": [
+      36,
+      6
+    ],
+    "T5_prediction_agreement": [
+      6,
+      5
+    ],
+    "T6_drift_by_model_method": [
+      24,
+      11
+    ],
+    "T7_drift_by_method": [
+      8,
+      10
+    ],
+    "T8_qat_mitigation": [
+      9,
+      14
+    ],
+    "N17_siim_ground_truth": [
+      174,
+      9
+    ],
+    "N17b_siim_summary": [
+      2,
+      9
+    ]
+  },
+  "siim_cam_layer": "bn2",
+  "rerun_note": "N17/N17b and fig_qualitative_cams were recomputed in a recovery session after the original kernel died; every other table and figure is carried over unchanged from the full run."
+}

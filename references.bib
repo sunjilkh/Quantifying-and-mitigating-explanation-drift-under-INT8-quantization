@@ -1,0 +1,624 @@
+% ============================================================================
+% references.bib — Quant-XAI Paper
+% Ordered by citation number in main.tex  [1]–[46]
+% ============================================================================
+
+% ===========================  INTRODUCTION [1]–[10]  ========================
+
+@article{Gholami2021survey,
+  author    = {Gholami, Amir and Kim, Sehoon and Dong, Zhen and Yao, Zhewei
+               and Mahoney, Michael W. and Keutzer, Kurt},
+  title     = {A survey of quantization methods for efficient neural network
+               inference},
+  journal   = {arXiv preprint arXiv:2103.13630},
+  year      = {2021},
+  doi       = {10.48550/arXiv.2103.13630}
+}
+
+@article{Nagel2021whitepaper,
+  author    = {Nagel, Markus and Fournarakis, Marios and Amjad, Rana Ali
+               and Bondarenko, Yelysei and van Baalen, Mart and Blankevoort, Tijmen},
+  title     = {A white paper on neural network quantization},
+  journal   = {arXiv preprint arXiv:2106.08295},
+  year      = {2021},
+  doi       = {10.48550/arXiv.2106.08295}
+}
+
+@inproceedings{Jacob2018quantization,
+  author    = {Jacob, Benoit and Kligys, Skirmantas and Chen, Bo and Zhu, Menglong
+               and Tang, Matthew and Howard, Andrew and Adam, Hartwig and Kalenichenko, Dmitry},
+  title     = {Quantization and training of neural networks for efficient
+               integer-arithmetic-only inference},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern
+               Recognition (CVPR)},
+  pages     = {2704--2713},
+  year      = {2018},
+  doi       = {10.1109/CVPR.2018.00286}
+}
+
+@inproceedings{Selvaraju2017gradcam,
+  author    = {Selvaraju, Ramprasaath R. and Cogswell, Michael and Das, Abhishek
+               and Vedantam, Ramakrishna and Parikh, Devi and Batra, Dhruv},
+  title     = {{Grad-CAM}: visual explanations from deep networks via
+               gradient-based localization},
+  booktitle = {Proceedings of the IEEE International Conference on Computer
+               Vision (ICCV)},
+  pages     = {618--626},
+  year      = {2017},
+  doi       = {10.1109/ICCV.2017.74}
+}
+
+@inproceedings{Chattopadhay2018gradcampp,
+  author    = {Chattopadhay, Aditya and Sarkar, Anirban and Howlader, Prantik
+               and Balasubramanian, Vineeth N.},
+  title     = {{Grad-CAM++}: generalized gradient-based visual explanations
+               for deep convolutional networks},
+  booktitle = {Proceedings of the IEEE Winter Conference on Applications of
+               Computer Vision (WACV)},
+  pages     = {839--847},
+  year      = {2018},
+  doi       = {10.1109/WACV.2018.00097}
+}
+
+@inproceedings{Sundararajan2017ig,
+  author    = {Sundararajan, Mukund and Taly, Ankur and Yan, Qiqi},
+  title     = {Axiomatic attribution for deep networks},
+  booktitle = {Proceedings of the 34th International Conference on Machine
+               Learning (ICML)},
+  pages     = {3319--3328},
+  year      = {2017}
+}
+
+@article{Smilkov2017smoothgrad,
+  author    = {Smilkov, Daniel and Thorat, Nikhil and Kim, Been and Vi\'{e}gas,
+               Fernanda and Wattenberg, Martin},
+  title     = {{SmoothGrad}: removing noise by adding noise},
+  journal   = {arXiv preprint arXiv:1706.03825},
+  year      = {2017},
+  doi       = {10.48550/arXiv.1706.03825}
+}
+
+@inproceedings{Ribeiro2016lime,
+  author    = {Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos},
+  title     = {{``Why should I trust you?''}: explaining the predictions of any
+               classifier},
+  booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference on
+               Knowledge Discovery and Data Mining},
+  pages     = {1135--1144},
+  year      = {2016},
+  doi       = {10.1145/2939672.2939778}
+}
+
+@inproceedings{Tan2021efficientnetv2,
+  author    = {Tan, Mingxing and Le, Quoc V.},
+  title     = {{EfficientNetV2}: smaller models and faster training},
+  booktitle = {Proceedings of the 38th International Conference on Machine
+               Learning (ICML)},
+  pages     = {10096--10106},
+  year      = {2021}
+}
+
+@article{Nagasubramanian2019plant,
+  author    = {Nagasubramanian, Koushik and Jones, Sarah and Singh, Asheesh K.
+               and Sarkar, Soumik and Singh, Arti and Ganapathysubramanian, Baskar},
+  title     = {Plant disease identification using explainable {3D} deep learning
+               on hyperspectral images},
+  journal   = {Plant Methods},
+  volume    = {15},
+  pages     = {98},
+  year      = {2019},
+  doi       = {10.1186/s13007-019-0479-8}
+}
+
+% ====================  LITERATURE REVIEW [11]–[45]  =========================
+
+% ----------  XAI + Quantization  ----------
+
+@incollection{Becking2022ecqx,
+  author    = {Becking, Daniel and Dreyer, Maximilian and Samek, Wojciech
+               and M\"{u}ller, Klaus-Robert and Barz, Bjarne},
+  title     = {{ECQx}: explainability-driven quantization for low-bit and sparse
+               {DNNs}},
+  booktitle = {Explainable Artificial Intelligence},
+  series    = {Lecture Notes in Artificial Intelligence},
+  volume    = {13200},
+  pages     = {271--296},
+  publisher = {Springer},
+  year      = {2022},
+  doi       = {10.1007/978-3-031-04083-2_14}
+}
+
+@article{Ranjan2024lrpqvit,
+  author    = {Ranjan, Navin and Savakis, Andreas},
+  title     = {{LRP-QViT}: mixed-precision {V}ision {T}ransformer quantization
+               via layer-wise relevance propagation},
+  journal   = {arXiv preprint arXiv:2401.11243},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2401.11243}
+}
+
+@article{Ranjan2025mixqvit,
+  author    = {Ranjan, Navin and Savakis, Andreas},
+  title     = {{Mix-QViT}: mixed-precision {V}ision {T}ransformer quantization
+               driven by layer importance and quantization sensitivity},
+  journal   = {arXiv preprint},
+  year      = {2025}
+}
+
+@article{Tashiro2023attention,
+  author    = {Tashiro, Ryo and Awano, Hiromitsu},
+  title     = {Pay attention via quantization: enhancing explainability of
+               neural networks via quantized activation},
+  journal   = {IEEE Access},
+  volume    = {11},
+  pages     = {34437--34447},
+  year      = {2023},
+  doi       = {10.1109/ACCESS.2023.3264855}
+}
+
+@article{Maleki2024quantized,
+  author    = {Maleki, Amin and Lavaei, Masoud and Bagheritabar, Mohammadhashem
+               and Beigzad, Shervin and Abadi, Zahra},
+  title     = {Quantized and interpretable learning scheme for deep neural
+               networks in classification task},
+  journal   = {arXiv preprint arXiv:2412.05319},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2412.05319}
+}
+
+@article{Rezabeyk2024saliency,
+  author    = {Rezabeyk, Elham Manouchehri and Beigzad, Shervin and Hamzavi,
+               Yasaman and Bagheritabar, Mohammadhashem and Mirikhoozani,
+               Seyed Salar},
+  title     = {Saliency assisted quantization for neural networks},
+  journal   = {arXiv preprint arXiv:2411.05850},
+  year      = {2024},
+  doi       = {10.48550/arXiv.2411.05850}
+}
+
+@inproceedings{Kim2025synq,
+  author    = {Kim, Minjun and Kim, Jiyun and Kang, U},
+  title     = {{SYNQ}: accurate zero-shot quantization by synthesis-aware
+               fine-tuning},
+  booktitle = {Proceedings of the International Conference on Learning
+               Representations (ICLR)},
+  year      = {2025}
+}
+
+@article{Xiao2025tacq,
+  author    = {Xiao, Han and Sung, Yi-Lin and Stengel-Eskin, Elias and
+               Bansal, Mohit},
+  title     = {Task-Circuit Quantization: leveraging knowledge localization
+               and interpretability for compression},
+  journal   = {arXiv preprint arXiv:2504.03970},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2504.03970}
+}
+
+% ----------  XAI-guided compression & LRP  ----------
+
+@inproceedings{Otsuki2024lrp,
+  author    = {Otsuki, Kazuki and Iida, Junpei and Doublet, Noe and
+               Hirakawa, Tsubasa and Yamashita, Takayoshi and
+               Fujiyoshi, Hironobu and Sugiura, Hiroshi},
+  title     = {Layer-wise relevance propagation with conservation property
+               for {ResNet}},
+  booktitle = {Proceedings of the European Conference on Computer Vision
+               (ECCV) Workshops},
+  year      = {2024}
+}
+
+@article{Malik2025pruning,
+  author    = {Malik, Nikita and Seth, Pratinav and Singh, Neeraj Kumar and Chitroda, Chintan and Sankarapu, Vinay Kumar},
+  title     = {Interpretability-aware pruning for efficient medical image analysis},
+  journal   = {arXiv preprint arXiv:2507.08330},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2507.08330}
+}
+
+% ----------  XAI for plant disease detection  ----------
+
+@article{Nigar2024plant,
+  author    = {Nigar, Nusrat and Faisal, Mohammad Imran and Umer, Muhammad
+               and Oki, Oluwafemi and Lukose, Joel},
+  title     = {Improving plant disease classification with deep learning based
+               prediction model using explainable artificial intelligence},
+  journal   = {IEEE Access},
+  volume    = {12},
+  pages     = {99741--99754},
+  year      = {2024},
+  doi       = {10.1109/ACCESS.2024.3428553}
+}
+
+@article{Porfirio2025plant,
+  author    = {Porf\'{i}rio, A. and Madeira, Rui Neves and Santos, Cl\'{a}udia},
+  title     = {Exploring explainable {AI} techniques for plant disease
+               classification in digital agriculture},
+  journal   = {Procedia Computer Science},
+  volume    = {265},
+  pages     = {175--182},
+  year      = {2025},
+  doi       = {10.1016/j.procs.2025.07.170}
+}
+
+@article{Gani2025papaya,
+  author    = {Gani, Md. Osman and others},
+  title     = {{PapayaNet}: an attention-guided {CNN} for papaya disease
+               classification with {Grad-CAM} and {LIME} explanations},
+  journal   = {Scientific Reports},
+  volume    = {15},
+  pages     = {25374},
+  year      = {2025},
+  doi       = {10.1038/s41598-025-25374-w}
+}
+
+@article{Nurullah2025tomato,
+  author    = {Nurullah, Md. and others},
+  title     = {Multi-label tomato disease detection using {V}ision
+               {T}ransformer with explainable {AI}},
+  journal   = {Electronics},
+  volume    = {14},
+  number    = {23},
+  pages     = {4762},
+  year      = {2025},
+  doi       = {10.3390/electronics14234762}
+}
+
+@inproceedings{Preotee2024bangladesh,
+  author    = {Preotee, Ayesha Siddika and others},
+  title     = {Bangladeshi leaf disease detection using explainable deep
+               learning},
+  booktitle = {Proceedings of the 27th International Conference on Computer
+               and Information Technology (ICCIT)},
+  publisher = {IEEE},
+  year      = {2024},
+  doi       = {10.1109/ICCIT64611.2024.11022335}
+}
+
+@inproceedings{Nawar2024efficientnet,
+  author    = {Nawar, Abrar and others},
+  title     = {{EfficientNet-B0} based plant disease classification using
+               {SHAP} explainability},
+  booktitle = {Proceedings of the International Conference on Computing
+               Advancements (ICCA)},
+  publisher = {ACM},
+  year      = {2024},
+  doi       = {10.1145/3723178.3723315}
+}
+
+@article{Hasan2025mulberry,
+  author    = {Hasan, Md. Rakibul and Haque, Md. Enamul and Sarker, Nitun
+               and Abdullah, Tawsin Arafat and Roy, Sourav and
+               Taaha, Md. Asaduzzaman Inam and Arafat, Syed Abu Taher
+               and Patwary, Md. Jaber Al and Ahsan, Mominul and Haider, Julfikar},
+  title     = {Mulberry leaf disease detection by {CNN-ViT} with {XAI}
+               integration},
+  journal   = {PLoS ONE},
+  volume    = {20},
+  number    = {4},
+  pages     = {e0325188},
+  year      = {2025},
+  doi       = {10.1371/journal.pone.0325188}
+}
+
+@article{Thakur2022plantxvit,
+  author    = {Thakur, Poornima Singh and Khanna, Pritee and Sheorey, Tanuja and Ojha, Aparajita},
+  title     = {Explainable vision transformer enabled convolutional neural network for plant disease identification: {PlantXViT}},
+  journal   = {arXiv preprint arXiv:2207.07919},
+  year      = {2022},
+  doi       = {10.48550/arXiv.2207.07919}
+}
+
+@inproceedings{Tabassum2024cbam,
+  author    = {Tabassum, Faria and Ahamed, Boshir S.},
+  title     = {{CBAM}-enhanced betel leaf disease classification with
+               {Grad-CAM} explainability},
+  booktitle = {Proceedings of the International Conference on Big Data,
+               IoT and Machine Learning (BIM)},
+  publisher = {Springer},
+  year      = {2024}
+}
+
+@article{Lysov2022entropy,
+  author    = {Lysov, Nikita A. and Maximova, Ekaterina I. and
+               Vasiliev, Evgeny P. and Getmanskaya, Anna A. and
+               Turlapov, Vadim E.},
+  title     = {Entropy as a high-level feature for {XAI}-based early plant
+               stress detection},
+  journal   = {Entropy},
+  volume    = {24},
+  number    = {11},
+  pages     = {1597},
+  year      = {2022},
+  doi       = {10.3390/e24111597}
+}
+
+% ----------  Quantization surveys and methods  ----------
+
+@article{Kusuma2025review,
+  author    = {Kusuma, R. and Rajkumar, R.},
+  title     = {Plant leaf disease detection and classification using
+               artificial intelligence techniques: a review},
+  journal   = {Indonesian Journal of Electrical Engineering and Computer Science},
+  volume    = {38},
+  number    = {2},
+  pages     = {1308--1323},
+  year      = {2025},
+  doi       = {10.11591/ijeecs.v38.i2.pp1308-1323}
+}
+
+@article{Maulana2026review,
+  author    = {Maulana, Dendi and Ramasamy, Rajasvaran Kamalasvaran},
+  title     = {Systematic review of quantization-optimized lightweight
+               {T}ransformer architectures for real-time fruit ripeness
+               detection on edge devices},
+  journal   = {Computers},
+  volume    = {15},
+  number    = {1},
+  pages     = {69},
+  year      = {2026},
+  doi       = {10.3390/computers15010069}
+}
+
+@inproceedings{Kim2025zsqsurvey,
+  author    = {Kim, Minjun and Choi, Jiwon and Lee, Jungwoo and
+               Cho, Wonhyuk and Kang, U},
+  title     = {Zero-shot quantization: a comprehensive survey},
+  booktitle = {Proceedings of the IJCAI-25 Survey Track},
+  year      = {2025}
+}
+
+@incollection{Lu2024qatsam,
+  author    = {Lu, Haisheng and Fu, Yujie and Zhang, Fan and Zhang, Le},
+  title     = {Efficient quantization-aware training on {S}egment {A}nything {M}odel in medical images and its deployment},
+  booktitle = {Medical Image Segmentation Foundation Models. CVPR 2024 Challenge: Segment Anything in Medical Images on Laptop},
+  pages     = {137--150},
+  publisher = {Springer Nature Switzerland},
+  address   = {Cham},
+  year      = {2025},
+  doi       = {10.1007/978-3-031-81854-7_9},
+  note      = {arXiv:2412.11186}
+}
+
+@article{Biswas2025regularization,
+  author    = {Biswas, Archisman and Singhal, Raghav and Elangovan, Suresh
+               and Sabnis, Simran and Ganguly, Udayan},
+  title     = {Regularization-based framework for quantization-, fault- and
+               variability-aware training},
+  journal   = {arXiv preprint arXiv:2502.03971},
+  year      = {2025},
+  doi       = {10.48550/arXiv.2502.03971}
+}
+
+@article{Qin2025entropy,
+  author    = {Qin, Ting and Li, Zhao and Zhao, Jiaqi and Yan, Yuting
+               and Du, Yafei},
+  title     = {Mixed precision quantization based on information entropy},
+  journal   = {Scientific Reports},
+  volume    = {15},
+  pages     = {91684},
+  year      = {2025},
+  doi       = {10.1038/s41598-025-91684-8}
+}
+
+% ----------  Medical / cross-domain XAI  ----------
+
+@article{Hasan2026brain,
+  author    = {Hasan, Md. Johirul and others},
+  title     = {{3D} {MRI} brain tumor classification using explainable deep
+               learning with channel attention},
+  journal   = {Expert Systems with Applications},
+  pages     = {131513},
+  year      = {2026},
+  doi       = {10.1016/j.eswa.2026.131513}
+}
+
+@article{Wang2025coronary,
+  author    = {Wang, Xuan and Guan, Jing and Li, Shuang and others},
+  title     = {Explainable-enhanced {AI} for diagnosing coronary microvascular
+               dysfunction with multimodal imaging},
+  journal   = {iScience},
+  volume    = {28},
+  pages     = {114101},
+  year      = {2025},
+  doi       = {10.1016/j.isci.2025.114101}
+}
+
+@article{Bennett2026xai,
+  author    = {Bennett, Cynthia L. and Cole-Lewis, Heather and others},
+  title     = {Interdisciplinary expertise to advance human-centered
+               explainable {AI}},
+  journal   = {Social Science \& Medicine},
+  volume    = {394},
+  pages     = {119036},
+  year      = {2026},
+  doi       = {10.1016/j.socscimed.2026.119036}
+}
+
+@article{DeFazio2026care,
+  author    = {De~Fazio, Antonio and others},
+  title     = {{CARE}: a rule-extraction framework for {PUV} diagnosis},
+  journal   = {Journal of Systems and Software},
+  pages     = {112720},
+  year      = {2026},
+  doi       = {10.1016/j.jss.2025.112720}
+}
+
+@article{McDonnell2026insurance,
+  author    = {McDonnell, David and others},
+  title     = {Explainable {AI} for insurance claims prediction},
+  journal   = {Technological Forecasting and Social Change},
+  pages     = {124418},
+  year      = {2026},
+  doi       = {10.1016/j.techfore.2025.124418}
+}
+
+@article{Guo2025sixg,
+  author    = {Guo, Shunlei and Zhong, Yi and Feng, Zhiyong and Kang, Song
+               and Chen, Jiajie},
+  title     = {Towards transparent {6G AI-RAN}: a survey on explainable deep
+               reinforcement learning for intelligent network slicing},
+  journal   = {Journal of Information and Intelligence},
+  year      = {2025},
+  doi       = {10.1016/j.jiixd.2025.12.005}
+}
+
+@article{Yoshida2026fukushima,
+  author    = {Yoshida, Hiroyuki and others},
+  title     = {Estimating {F}ukushima dose rates using {LightGBM} with {SHAP}
+               explainability},
+  journal   = {Journal of Environmental Radioactivity},
+  pages     = {107900},
+  year      = {2026},
+  doi       = {10.1016/j.jenvrad.2026.107900}
+}
+
+@article{Banales2026energy,
+  author    = {Ba\~{n}ales, Sergio and Dormido, Ra\'{u}l and Duro, Natividad},
+  title     = {Explainable {AI} for predicting household demand flexibility},
+  journal   = {Energy and AI},
+  volume    = {24},
+  pages     = {100686},
+  year      = {2026},
+  doi       = {10.1016/j.egyai.2026.100686}
+}
+
+% ----------  Additional method references  ----------
+
+@article{Wang2004ssim,
+  author    = {Wang, Zhou and Bovik, Alan C. and Sheikh, Hamid R. and
+               Simoncelli, Eero P.},
+  title     = {Image quality assessment: from error visibility to structural
+               similarity},
+  journal   = {IEEE Transactions on Image Processing},
+  volume    = {13},
+  number    = {4},
+  pages     = {600--612},
+  year      = {2004},
+  doi       = {10.1109/TIP.2003.819861}
+}
+
+@misc{Wightman2021timm,
+  author    = {Wightman, Ross},
+  title     = {{PyTorch Image Models}},
+  year      = {2021},
+  journal   = {GitHub repository},
+  howpublished = {\url{https://github.com/rwightman/pytorch-image-models}},
+  doi       = {10.5281/zenodo.4414861}
+}
+
+@inproceedings{He2016resnet,
+  author    = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  title     = {Deep residual learning for image recognition},
+  booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {770--778},
+  year      = {2016},
+  doi       = {10.1109/CVPR.2016.90}
+}
+
+@inproceedings{Howard2019mobilenetv3,
+  author    = {Howard, Andrew and Sandler, Mark and Chen, Bo and Wang, Weijun and
+               Chen, Liang-Chieh and Tan, Mingxing and Chu, Grace and Vasudevan,
+               Vijay and Zhu, Yukun and Pang, Ruoming and Adam, Hartwig and Le, Quoc},
+  title     = {Searching for {MobileNetV3}},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages     = {1314--1324},
+  year      = {2019},
+  doi       = {10.1109/ICCV.2019.00140}
+}
+
+@article{Hooker2020compressed,
+  author    = {Hooker, Sara and Courville, Aaron and Clark, Gregory and
+               Dauphin, Yann and Frome, Andrea},
+  title     = {What do compressed deep neural networks forget?},
+  journal   = {arXiv preprint arXiv:1911.05248},
+  year      = {2020},
+  doi       = {10.48550/arXiv.1911.05248}
+}
+
+@misc{PaddyDisease2022,
+  author       = {Gokul, Loke and Anantharaman, P.},
+  title        = {{Paddy Doctor}: Paddy Disease Classification},
+  year         = {2022},
+  howpublished = {Kaggle Competition Dataset},
+  url          = {https://www.kaggle.com/competitions/paddy-disease-classification},
+  note         = {Accessed: 2024}
+}
+
+@article{AlMamun2026conmamba,
+  author  = {Al Mamun, Abdullah and Zhang, Miaohua and Ahmedt-Aristizabal, David and Hayder, Zeeshan and Awrangjeb, Mohammad},
+  title   = {{ConMamba}: Contrastive vision Mamba for plant disease detection},
+  journal = {Pattern Recognition},
+  volume  = {176},
+  pages   = {113177},
+  year    = {2026},
+  doi     = {10.1016/j.patcog.2026.113177}
+}
+
+@article{AlMamun2024access,
+  author  = {Al Mamun, Abdullah and Ahmedt-Aristizabal, David and Zhang, Miaohua and Hossen, Md Ismail and Hayder, Zeeshan and Awrangjeb, Mohammad},
+  title   = {Plant disease detection using self-supervised learning: A systematic review},
+  journal = {IEEE Access},
+  volume  = {12},
+  pages   = {171926--171943},
+  year    = {2024},
+  doi     = {10.1109/ACCESS.2024.3475819}
+}
+
+% ----------  Two additional Reviewer 3 suggested references  ----------
+
+@article{AlMamun2025psmamba,
+  author  = {Al Mamun, Abdullah and Zhang, Miaohua and Ahmedt-Aristizabal, David and Hayder, Zeeshan and Awrangjeb, Mohammad},
+  title   = {{PSMamba}: Progressive self-supervised {V}ision {M}amba for plant disease recognition},
+  journal = {arXiv preprint arXiv:2512.14309},
+  year    = {2025},
+  doi     = {10.48550/arXiv.2512.14309}
+}
+
+@inproceedings{AlMamun2026statespacssl,
+  author    = {Al Mamun, Abdullah and Zhang, Miaohua and Ahmedt-Aristizabal, David and Hayder, Zeeshan and Awrangjeb, Mohammad},
+  title     = {{StateSpace-SSL}: Linear-time self-supervised learning for plant disease detection},
+  booktitle = {Proceedings of the First International Workshop on AI in Agriculture (AgriAI 2026) at AAAI 2026},
+  year      = {2026},
+  doi       = {10.48550/arXiv.2512.09492}
+}
+
+% ----------  Dataset references  ----------
+
+@misc{SIIMPneumothorax2019,
+  author       = {{Society for Imaging Informatics in Medicine (SIIM)} and
+                  {American College of Radiology (ACR)}},
+  title        = {{SIIM-ACR} Pneumothorax Segmentation},
+  year         = {2019},
+  howpublished = {Kaggle Competition Dataset},
+  url          = {https://www.kaggle.com/datasets/jesperdramsch/siim-acr-pneumothorax-segmentation-data},
+  note         = {Accessed: 2024}
+}
+
+@article{Parraga2019rocole,
+  author  = {Parraga-Alava, Jorge and Cusme, Kevin and Loor, Ang\'{e}lica and Santander, Esneider},
+  title   = {{RoCoLe}: A robusta coffee leaf images dataset for evaluation of machine learning based methods in plant diseases recognition},
+  journal = {Data in Brief},
+  volume  = {25},
+  pages   = {104414},
+  year    = {2019},
+  doi     = {10.1016/j.dib.2019.104414}
+}
+
+
+@article{Hunter2007Matplotlib,
+  author = {Hunter, John D.},
+  title = {{Matplotlib}: A 2D graphics environment},
+  journal = {Computing in Science \& Engineering},
+  volume = {9}, number = {3}, pages = {90--95}, year = {2007},
+  doi = {10.1109/MCSE.2007.55}
+}
+
+@misc{Khandaker2026QuantXAI,
+  author = {Khandaker, Sunzil},
+  title = {Quantifying and mitigating explanation drift under {INT8} quantization in plant disease image classification},
+  year = {2026}, publisher = {Zenodo},
+  note = {Software release v1.3},
+  doi = {10.5281/zenodo.21887946},
+  url = {https://doi.org/10.5281/zenodo.21887946}
+}

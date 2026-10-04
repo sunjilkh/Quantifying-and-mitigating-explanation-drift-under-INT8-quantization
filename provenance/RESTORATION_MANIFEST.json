@@ -14,7 +14,7 @@
       "sha256": "080ad9046fdd9dde639f282c313d4b0f7d1c704c8e668ad65f551b83a9af015f"
     },
     {
-      "file": "provenance/quantxai-revision-oneshot-3.ipynb",
+      "file": "quantxai-revision-oneshot-3.ipynb",
       "size_bytes": 257285,
       "sha256": "3062cc4f5f97455a56c11671671baef63d91555f8d863e7dcac20f2f6bd4e5cc"
     }
@@ -79,7 +79,7 @@
     "qat_logged_runs_checked": 21,
     "ort_summary_rows_checked": 9,
     "maximum_gate_difference_from_displayed_values": 0.0064,
-    "raw_derivative_tables_checked": 12,
+    "raw_derivative_tables_checked": 8,
     "recovery_notebook_code_cells_executed": true,
     "jupyter_kernel_available": false,
     "repeat_run_active_csv_bytes_equal": true
@@ -386,17 +386,5 @@
       "maximum_absolute_difference": 4.06222038000139e-05,
       "status": "verified against archived raw data, not a new inference run"
     }
-  ],
-  "final_audit_date": "2026-10-04",
-  "publication_status": "prepared for release; new DOI not assigned",
-  "proposed_release_version": "2.0.0",
-  "final_validation": "provenance/FINAL_AUDIT_VALIDATION.json",
-  "current_inventory": "provenance/SHA256SUMS.csv",
-  "historical_restoration_snapshot": "provenance/RESTORATION_MANIFEST.json",
-  "figure_regeneration_check": {
-    "status": "8 statistical figures generated successfully",
-    "validation_environment_matplotlib": "3.10.8",
-    "original_figure_metadata_matplotlib": "3.10.0",
-    "original_figures_replaced": false
-  }
+  ]
 }

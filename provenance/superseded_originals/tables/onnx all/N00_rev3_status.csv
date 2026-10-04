@@ -1,0 +1,7 @@
+task,status,detail
+A_qat_vs_lambda0,OK,"9/9 cells improve vs lam=0, 6 Holm-sig, 5/9 monotone (0.7s)"
+B_agreement_reconcile,OK,archs with >1 distinct qdq agreement: ['mobilenetv3_large_100'] (0.3s)
+C_inventory_budget,OK,"current=288000 passes, full-all=3872520 (13.4x), cam-only=49968 (17% of current) (0.0s)"
+SPLIT_reconstruction,OK,paddy=10407 val=2082 train=8325 eval320_resolvable=True (133.8s)
+D_calib_matched64,SKIPPED,ModuleNotFoundError: No module named 'onnxruntime'
+E_fullsplit_cam,OK,"3 archs, 12492 rows (2480.1s)"

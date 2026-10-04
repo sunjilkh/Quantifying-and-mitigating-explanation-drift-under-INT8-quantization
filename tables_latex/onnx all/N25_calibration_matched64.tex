@@ -1,0 +1,13 @@
+% Rounded summary restored or metadata clarified; see provenance/RESTORATION_MANIFEST.json
+\begin{tabular}{llllllllllllllll}
+arch & engine & calib\_source & calib\_method & n\_calib & n\_eval & agreement & int8\_acc & fp32\_acc & size\_mb & published\_n\_calib & published\_agreement & published\_int8\_acc & delta\_vs\_published & rebuild\_fidelity\_maxabs\_delta\_at\_matched\_n & n\_calib\_requested \\
+tf\_efficientnetv2\_s & onnxruntime & train\_subset & MinMax & 60 & 320 & 0.5281 & 0.5281 & 0.9812 & 22.77 & 512 & 0.6344 & 0.6406 & -0.1063 & 0.2094 & 64 \\
+tf\_efficientnetv2\_s & onnxruntime & train\_subset & Entropy & 60 & 320 & 0.5281 & 0.5281 & 0.9812 & 22.77 & 64 & 0.7375 & 0.7438 & -0.2094 & 0.2094 & 64 \\
+tf\_efficientnetv2\_s & onnxruntime & train\_subset & Percentile & 60 & 320 & 0.9062 & 0.9000 & 0.9812 & 22.77 & 64 & 0.9156 & 0.9094 & -0.0094 & 0.2094 & 64 \\
+resnet50 & onnxruntime & train\_subset & MinMax & 60 & 320 & 0.9313 & 0.9156 & 0.9688 & 24.04 & 512 & 0.9000 & 0.8844 & 0.0313 & 0.2094 & 64 \\
+resnet50 & onnxruntime & train\_subset & Entropy & 60 & 320 & 0.9313 & 0.9156 & 0.9688 & 24.04 & 64 & 0.9656 & 0.9563 & -0.0343 & 0.2094 & 64 \\
+resnet50 & onnxruntime & train\_subset & Percentile & 60 & 320 & 0.9781 & 0.9625 & 0.9688 & 24.04 & 64 & 0.9781 & 0.9563 & 0.0000 & 0.2094 & 64 \\
+mobilenetv3\_large\_100 & onnxruntime & train\_subset & MinMax & 60 & 320 & 0.7719 & 0.7625 & 0.9781 & 4.70 & 512 & 0.5469 & 0.5312 & 0.2250 & 0.2094 & 64 \\
+mobilenetv3\_large\_100 & onnxruntime & train\_subset & Entropy & 60 & 320 & 0.7719 & 0.7625 & 0.9781 & 4.70 & 64 & 0.7688 & 0.7594 & 0.0031 & 0.2094 & 64 \\
+mobilenetv3\_large\_100 & onnxruntime & train\_subset & Percentile & 60 & 320 & 0.8938 & 0.8781 & 0.9781 & 4.70 & 64 & 0.8906 & 0.8750 & 0.0032 & 0.2094 & 64 \\
+\end{tabular}

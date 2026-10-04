@@ -36,12 +36,7 @@ K_MAIN      = 0.15
 SIM_MAIN    = "qdq"
 SEED        = 42
 NGRID       = 240
-import argparse
-_parser = argparse.ArgumentParser(description="Regenerate figures from archived CSVs without inference")
-_parser.add_argument("--tables", type=Path, default=Path(__file__).resolve().parent / "tables")
-_parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "figures_regenerated")
-_args = _parser.parse_args()
-OUTDIR = _args.output
+OUTDIR      = Path("/kaggle/working/figures_v2")
 #
 NOTE_H   = 0.13   # reserved footer row height, relative to one panel
 LEGEND_H = 0.13   # reserved legend row height, relative to one panel
@@ -116,9 +111,7 @@ def find_tables():
     raise SystemExit("Could not find tables/. Attach the results bundle as a dataset input.")
 #
 #
-TABLES = _args.tables.resolve()
-if not _looks_like_tables(TABLES):
-    raise SystemExit("Specify --tables with the directory containing N10_lambda_sweep.csv and RAW_drift_all.csv")
+TABLES = find_tables()
 FIGSRC = TABLES.parent / "figures"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 print("[src] tables : " + str(TABLES))
@@ -422,13 +415,13 @@ for stem in ("fig_qualitative_cams",):
         MADE.append(stem + " (carried over)")
         print("  [cp] " + stem.ljust(32) + " (needs GPU+weights; copied unchanged)")
     else:
-        print("  [!!] " + stem + " optional qualitative image absent; eight statistical figures are complete")
+        print("  [!!] " + stem + " NOT FOUND - copy it from your Old/ figures folder by hand")
 #
 #
 # =============================================================================
 # package + report
 # =============================================================================
-zip_path = OUTDIR.parent / (OUTDIR.name + ".zip")
+zip_path = Path("/kaggle/working/figures_v2.zip")
 with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
     for f in sorted(OUTDIR.iterdir()):
         if f.is_file():
